@@ -1,0 +1,125 @@
+@import "../variables";
+
+.hero {
+  text-align: center;
+
+  &__title,
+  &__descr,
+  &__authentication-btns {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    width: 70vw;
+    margin: 0 auto;
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+
+    &::after {
+      content: "";
+      margin-top: 24px;
+      width: 800px;
+      border-bottom: 2px $black dashed;
+    }
+  }
+
+  &__authentication-btns {
+    a {
+      &:first-child {
+        margin-right: 24px;
+      }
+    }
+  }
+
+  &__discover {
+    display: inline-flex;
+    color: $gray;
+    font-weight: 600;
+    margin-bottom: 42px;
+
+    img {
+      margin-right: 12px;
+    }
+  }
+
+  &__illustration {
+    display: grid;
+    grid-template-columns: repeat(3, 346px);
+    width: 80%;
+    margin: 0 auto;
+
+    &-item {
+      border: $border;
+      background-color: $dark;
+      padding: 24px;
+
+      &:first-child {
+        border-top-left-radius: $border-radius;
+      }
+
+      &:nth-child(3) {
+        border-top-right-radius: $border-radius;
+      }
+
+      &-top {
+        margin-bottom: 32px;
+        justify-content: space-between;
+      }
+
+      &-logo {
+        height: 44px;
+        width: 44px;
+      }
+
+      &-info {
+        text-align: start;
+
+        span {
+          font-size: 16px;
+          font-weight: 500;
+          color: #a5adcf;
+        }
+
+        p {
+          font-size: 25px;
+          font-weight: 700;
+        }
+      }
+
+      &-crypto-symbol {
+        align-self: flex-start;
+        font-size: 16px;
+        font-weight: 400;
+        color: #5d6588;
+      }
+
+      &-bottom {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+
+        img {
+          width: 178px;
+          height: 48px;
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 800;
+          color: #42d559;
+        }
+      }
+    }
+  }
+
+  &__illustration-underline {
+    content: "";
+    border: 1px $black solid;
+  }
+}

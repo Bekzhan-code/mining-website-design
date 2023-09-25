@@ -1,0 +1,26 @@
+@import "../variables";
+
+.statistics {
+  text-align: center;
+  &__title {
+    margin-bottom: 46px;
+  }
+
+  &__list {
+    &-item {
+      padding: 16px 36px;
+      border: $border;
+      border-radius: $border-radius-bigger;
+      background-color: $dark;
+
+      h3 {
+        font-weight: 800;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-weight: 400;
+      }
+    }
+  }
+}

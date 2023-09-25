@@ -1,0 +1,33 @@
+@import "../variables";
+
+.header {
+  padding: 20px 16px;
+
+  &__title {
+    font-weight: 900;
+  }
+
+  &__nav {
+    min-width: 384px;
+    border: $border;
+    border-radius: 16px;
+    padding: $padding;
+
+    &-item {
+      color: $gray;
+      font-weight: 500;
+
+      &.active {
+        color: $white;
+      }
+    }
+  }
+
+  &__authentication-btns {
+    a {
+      &:first-child {
+        margin-right: 24px;
+      }
+    }
+  }
+}

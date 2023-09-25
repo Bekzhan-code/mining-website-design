@@ -1,0 +1,26 @@
+@import "../variables";
+
+.btn {
+  padding: $btn-padding;
+  font-weight: 600;
+  font-size: 20px;
+  border: none;
+  border-radius: $btn-border-radius;
+  background-color: $dark;
+  border: $border;
+
+  &--blue {
+    background-color: $blue;
+    border: none;
+  }
+
+  &--header {
+    padding: $padding;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+}
