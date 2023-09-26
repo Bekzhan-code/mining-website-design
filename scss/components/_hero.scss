@@ -41,6 +41,7 @@
     display: inline-flex;
     color: $gray;
     font-weight: 600;
+    font-size: 20px;
     margin-bottom: 42px;
 
     img {
@@ -55,8 +56,6 @@
     margin: 0 auto;
 
     &-item {
-      border: $border;
-      background-color: $dark;
       padding: 24px;
 
       &:first-child {
@@ -80,15 +79,12 @@
       &-info {
         text-align: start;
 
-        span {
-          font-size: 16px;
-          font-weight: 500;
+        p {
           color: #a5adcf;
         }
 
-        p {
+        h4 {
           font-size: 25px;
-          font-weight: 700;
         }
       }
 
@@ -112,14 +108,16 @@
         p {
           font-size: 16px;
           font-weight: 800;
-          color: #42d559;
+          color: $green;
         }
       }
     }
-  }
 
-  &__illustration-underline {
-    content: "";
-    border: 1px $black solid;
+    &-underline {
+      content: "";
+      border: 1px $black solid;
+      position: relative;
+      top: -1px;
+    }
   }
 }

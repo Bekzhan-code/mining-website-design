@@ -1,0 +1,39 @@
+@import "../variables";
+
+.transactions {
+  &__title {
+    text-align: center;
+    margin-bottom: 46px;
+  }
+
+  &__list {
+    li {
+      margin: 12px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+      }
+
+      p {
+        font-weight: 400;
+
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+
+    &-type {
+      font-weight: 700;
+      color: $green;
+      min-width: 117px;
+      text-align: end;
+
+      &.withdrawal {
+        color: $orange;
+      }
+    }
+  }
+}

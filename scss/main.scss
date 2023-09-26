@@ -13,7 +13,36 @@
   align-items: center;
 }
 
+.box {
+  border: $border;
+  border-radius: $border-radius;
+  background-color: $dark;
+
+  &--exclude-radius {
+    border: $border;
+    background-color: $dark;
+  }
+
+  &--bigger-radius {
+    border-radius: $border-radius-bigger;
+  }
+}
+
 /* || MAIN CLASSES */
+
+body {
+  background-image: url("../assets/img/Waves-bg-1.svg");
+
+  &.main {
+    background-image: url("../assets/img/Waves-bg-1.svg"),
+      url("../assets/img/Waves-bg-2.svg"), url("../assets/img/Waves-bg-3.svg");
+    background-position: top center, bottom left, bottom right;
+  }
+
+  &.about {
+    background-image: url("../assets/img/Waves-bg-2.svg");
+  }
+}
 
 .container {
   width: 85vw;

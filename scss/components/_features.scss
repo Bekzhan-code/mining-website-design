@@ -1,0 +1,120 @@
+@import "../variables";
+
+.features {
+  padding: 80px 0;
+  column-gap: 73px;
+
+  &__illustration {
+    position: relative;
+    width: 70vw;
+    height: 528px;
+
+    &-background,
+    &-trader,
+    &-crypto {
+      position: absolute;
+    }
+
+    &-sm-ellipse {
+      left: 97px;
+    }
+
+    &-lg-ellipse {
+      left: 25px;
+      top: 47px;
+    }
+
+    &-globus {
+      left: 49px;
+      top: 19px;
+    }
+
+    &-crypto {
+      &-bitcoin {
+        left: 432px;
+        top: 112px;
+      }
+
+      &-tether {
+        left: 367px;
+        top: 435px;
+      }
+
+      &-ripple {
+        left: 325px;
+        top: 30px;
+      }
+
+      &-dollar {
+        left: 44px;
+        top: 123px;
+      }
+
+      &-ethereum {
+        top: 368px;
+      }
+    }
+
+    &-trader {
+      padding: 24px;
+      display: inline-flex;
+
+      &-countries {
+        top: 42px;
+        left: 77px;
+      }
+
+      &-location {
+        top: 229px;
+        left: 376px;
+      }
+
+      &-certification {
+        top: 307px;
+        left: 36px;
+      }
+
+      img {
+        margin-right: 16px;
+      }
+
+      span {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 4px;
+        color: $blue;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__content {
+    &-text {
+      margin-bottom: 46px;
+    }
+    &-title {
+      margin-bottom: 24px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      img {
+        padding: 34px;
+        margin-right: 32px;
+      }
+
+      h4 {
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}

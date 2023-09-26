@@ -1,0 +1,53 @@
+@import "../_variables.scss";
+
+.calculator {
+  padding: 80px 0;
+  &__text {
+    text-align: center;
+    margin: 0 auto 46px auto;
+    width: 45vw;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    &-power,
+    &-profit {
+      padding: 24px 32px;
+    }
+    &-power {
+      &-title {
+        font-size: 20px;
+        margin-bottom: 24px;
+      }
+      &-options {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        &-item {
+          h6 {
+            margin-bottom: 4px;
+          }
+
+          ul {
+            padding: 10px 20px;
+
+            li {
+              justify-content: start;
+              img {
+                margin-right: 8px;
+                width: 40px;
+                height: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

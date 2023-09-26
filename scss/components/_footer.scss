@@ -1,0 +1,13 @@
+@import "../variables";
+
+.footer {
+  padding: 24px 0;
+  font-size: 16px;
+  vertical-align: center;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 900;
+    margin-right: 24px;
+  }
+}

@@ -9,9 +9,6 @@
   &__list {
     &-item {
       padding: 16px 36px;
-      border: $border;
-      border-radius: $border-radius-bigger;
-      background-color: $dark;
 
       h3 {
         font-weight: 800;
@@ -21,6 +18,14 @@
       p {
         font-weight: 400;
       }
+    }
+
+    &-dashed-line {
+      content: "";
+      border: 2px dashed $black;
+      position: relative;
+      top: -50px;
+      z-index: -1;
     }
   }
 }
