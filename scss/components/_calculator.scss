@@ -20,12 +20,14 @@
     &-profit {
       padding: 24px 32px;
     }
-    &-power {
+    &-power,
+    &-profit {
+      width: min(340px, 406px);
       &-title {
         font-size: 20px;
         margin-bottom: 24px;
       }
-      &-options {
+      &-content {
         display: flex;
         flex-direction: column;
         row-gap: 24px;
@@ -34,20 +36,31 @@
             margin-bottom: 4px;
           }
 
-          ul {
-            padding: 10px 20px;
-
-            li {
+          select {
+            option {
               justify-content: start;
-              img {
-                margin-right: 8px;
-                width: 40px;
-                height: 40px;
-              }
+              margin: 12px;
+              // img {
+              //   margin-right: 8px;
+              //   width: 40px;
+              //   height: 40px;
+              // }
             }
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .calculator {
+    &__text {
+      width: 100%;
+    }
+    &__content {
+      flex-direction: column;
+      align-items: center;
     }
   }
 }

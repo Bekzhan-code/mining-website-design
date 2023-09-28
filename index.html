@@ -6,48 +6,52 @@
 
     <link rel="stylesheet" href="css/main.css" />
 
+    <script src="js/main.js" defer></script>
     <title>Main Page</title>
   </head>
-  <body class="main">
-    <main class="container">
-      <header class="header flex">
-        <a class="header__title" href="/">CRYPTON.CC</a>
-        <nav class="header__nav">
-          <ul class="flex">
-            <li><a class="header__nav-item active" href="/">Home</a></li>
-            <li><a class="header__nav-item" href="/about">About us</a></li>
-            <li><a class="header__nav-item" href="/plans">Plans</a></li>
-            <li><a class="header__nav-item" href="/contact">Contact</a></li>
-            <li><a class="header__nav-item" href="/faq">FAQ</a></li>
-          </ul>
-        </nav>
-        <div class="header__authentication-btns">
+  <body class="main container">
+    <header class="header flex">
+      <a class="header__title" href="/">CRYPTON.CC</a>
+
+      <nav class="header__nav">
+        <ul class="flex">
+          <li><a class="active" href="/">Home</a></li>
+          <li><a href="/about">About us</a></li>
+          <li><a href="/plans">Plans</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/faq">FAQ</a></li>
+        </ul>
+
+        <div class="header__nav-btns">
           <a href="/login"><button class="btn btn--header">Login</button></a>
           <a href="/register"
             ><button class="btn btn--blue btn--header">Register</button></a
           >
         </div>
-      </header>
+      </nav>
+      <div class="header__burger"><span></span></div>
+    </header>
 
+    <main>
       <section class="hero">
         <h1 class="hero__title">
           Mine 5 coins today and get your profit increase
         </h1>
-        <p class="hero__descr">
+        <h4 class="hero__descr">
           Whether you choose to utilize our Cloud Mining service or prefer to
           acquire cryptocurrencies directly.
-        </p>
+        </h4>
         <div class="hero__authentication-btns">
           <a href="/login"><button class="btn">Sign-In</button></a>
           <a href="/register"><button class="btn btn--blue">Sign-Up</button></a>
         </div>
-        <a class="hero__discover" href="#">
+        <a class="hero__discover" href="#plans">
           <img src="assets/icons/Caret_Down.svg" alt="Caret Down" />
           Discover More
         </a>
         <div class="hero__illustration">
           <div class="hero__illustration-item box--exclude-radius">
-            <div class="hero__illustration-item-top flex">
+            <div class="hero__illustration-item-top">
               <img
                 class="hero__illustration-item-logo"
                 src="assets/img/BTC-Logo.svg"
@@ -55,7 +59,7 @@
               />
               <div class="hero__illustration-item-info">
                 <p>Bitcoin</p>
-                <h4>MP: 15 000 GH/s</h4>
+                <span>15 000 GH/s</span>
               </div>
               <span class="hero__illustration-item-crypto-symbol">BTC</span>
             </div>
@@ -66,17 +70,17 @@
           </div>
 
           <div class="hero__illustration-item box--exclude-radius">
-            <div class="hero__illustration-item-top flex">
+            <div class="hero__illustration-item-top">
               <img
                 class="hero__illustration-item-logo"
                 src="assets/img/ETH-Logo.svg"
                 alt="Logo"
               />
               <div class="hero__illustration-item-info">
-                <p>Bitcoin</p>
-                <h4>MP: 15 000 GH/s</h4>
+                <p>Ethereum</p>
+                <span>5 000 GH/s</span>
               </div>
-              <span class="hero__illustration-item-crypto-symbol">BTC</span>
+              <span class="hero__illustration-item-crypto-symbol">ETH</span>
             </div>
             <div class="hero__illustration-item-bottom">
               <img src="assets/img/ETH-Graph.svg" alt="Graph" />
@@ -85,17 +89,17 @@
           </div>
 
           <div class="hero__illustration-item box--exclude-radius">
-            <div class="hero__illustration-item-top flex">
+            <div class="hero__illustration-item-top">
               <img
                 class="hero__illustration-item-logo"
                 src="assets/img/BNB-Logo.svg"
                 alt="Logo"
               />
               <div class="hero__illustration-item-info">
-                <p>Bitcoin</p>
-                <h4>MP: 15 000 GH/s</h4>
+                <p>Binance Coin</p>
+                <span>10 000 GH/s</span>
               </div>
-              <span class="hero__illustration-item-crypto-symbol">BTC</span>
+              <span class="hero__illustration-item-crypto-symbol">BNB</span>
             </div>
             <div class="hero__illustration-item-bottom">
               <img src="assets/img/BNB-Graph.svg" alt="Graph" />
@@ -104,17 +108,17 @@
           </div>
 
           <div class="hero__illustration-item box--exclude-radius">
-            <div class="hero__illustration-item-top flex">
+            <div class="hero__illustration-item-top">
               <img
                 class="hero__illustration-item-logo"
                 src="assets/img/XRP-Logo.svg"
                 alt="Logo"
               />
               <div class="hero__illustration-item-info">
-                <p>Bitcoin</p>
-                <h4>MP: 15 000 GH/s</h4>
+                <p>Ripple</p>
+                <span>20 000 GH/s</span>
               </div>
-              <span class="hero__illustration-item-crypto-symbol">BTC</span>
+              <span class="hero__illustration-item-crypto-symbol">XRP</span>
             </div>
             <div class="hero__illustration-item-bottom">
               <img src="assets/img/XRP-Graph.svg" alt="Graph" />
@@ -123,17 +127,17 @@
           </div>
 
           <div class="hero__illustration-item box--exclude-radius">
-            <div class="hero__illustration-item-top flex">
+            <div class="hero__illustration-item-top">
               <img
                 class="hero__illustration-item-logo"
                 src="assets/img/USDT-Logo.svg"
                 alt="Logo"
               />
               <div class="hero__illustration-item-info">
-                <p>Bitcoin</p>
-                <h4>MP: 15 000 GH/s</h4>
+                <p>Tether</p>
+                <span>20 000 GH/s</span>
               </div>
-              <span class="hero__illustration-item-crypto-symbol">BTC</span>
+              <span class="hero__illustration-item-crypto-symbol">USDT</span>
             </div>
             <div class="hero__illustration-item-bottom">
               <img src="assets/img/USDT-Graph.svg" alt="Graph" />
@@ -142,17 +146,17 @@
           </div>
 
           <div class="hero__illustration-item box--exclude-radius">
-            <div class="hero__illustration-item-top flex">
+            <div class="hero__illustration-item-top">
               <img
                 class="hero__illustration-item-logo"
                 src="assets/img/TRX-Logo.svg"
                 alt="Logo"
               />
               <div class="hero__illustration-item-info">
-                <p>Bitcoin</p>
-                <h4>MP: 15 000 GH/s</h4>
+                <p>Tron</p>
+                <span>25 000 GH/s</span>
               </div>
-              <span class="hero__illustration-item-crypto-symbol">BTC</span>
+              <span class="hero__illustration-item-crypto-symbol">TRX</span>
             </div>
             <div class="hero__illustration-item-bottom">
               <img src="assets/img/TRX-Graph.svg" alt="Graph" />
@@ -160,11 +164,10 @@
             </div>
           </div>
         </div>
-
         <div class="hero__illustration-underline"></div>
       </section>
 
-      <section class="plans">
+      <section class="plans" id="plans">
         <div class="plans__text">
           <h2 class="plans__title">We created plans</h2>
           <h5 class="plans__descr">
@@ -194,7 +197,7 @@
           </div>
 
           <div class="plans-list__item box">
-            <h3 class="plans-list__item-title">Free</h3>
+            <h3 class="plans-list__item-title">Basic</h3>
             <h4 class="plans-list__item-price">$20.00</h4>
             <div class="plans-list__item-info">
               <div class="flex">
@@ -214,7 +217,7 @@
           </div>
 
           <div class="plans-list__item box">
-            <h3 class="plans-list__item-title">Free</h3>
+            <h3 class="plans-list__item-title">Premium</h3>
             <h4 class="plans-list__item-price">$70.00</h4>
             <div class="plans-list__item-info">
               <div class="flex">
@@ -234,7 +237,7 @@
           </div>
 
           <div class="plans-list__item box">
-            <h3 class="plans-list__item-title">Free</h3>
+            <h3 class="plans-list__item-title">Special</h3>
             <h4 class="plans-list__item-price">$210.00</h4>
             <div class="plans-list__item-info">
               <div class="flex">
@@ -256,9 +259,9 @@
       </section>
 
       <section class="payment-coins">
-        <h3 class="payment-coins__title">
+        <h2 class="payment-coins__title">
           Pay with 6 different coins using any wallet you want
-        </h3>
+        </h2>
 
         <div class="payment-coins__list">
           <div class="payment-coins__list-item flex box box--bigger-radius">
@@ -272,7 +275,7 @@
           </div>
 
           <div class="payment-coins__list-item flex box box--bigger-radius">
-            <h5>Binance coin</h5>
+            <h5>BNB</h5>
             <img src="assets/img/BNB-Logo.svg" alt="Logo" />
           </div>
 
@@ -294,8 +297,8 @@
       </section>
 
       <section class="statistics">
-        <h3 class="statistics__title">Realtime statistics:</h3>
-        <div class="statistics__list flex">
+        <h2 class="statistics__title">Realtime statistics:</h2>
+        <div class="statistics__list">
           <div class="statistics__list-item box box--bigger-radius">
             <h3>72</h3>
             <p>Days in work</p>
@@ -401,7 +404,7 @@
             </h5>
           </div>
           <div class="features__content-list">
-            <div class="features__content-list-item flex">
+            <div class="features__content-list-item">
               <img class="box" src="assets/icons/Clarity.svg" alt="Clarity" />
               <div>
                 <h4>Clarity</h4>
@@ -411,7 +414,7 @@
                 </p>
               </div>
             </div>
-            <div class="features__content-list-item flex">
+            <div class="features__content-list-item">
               <img
                 class="box"
                 src="assets/icons/Confidence.svg"
@@ -425,7 +428,7 @@
                 </p>
               </div>
             </div>
-            <div class="features__content-list-item flex">
+            <div class="features__content-list-item">
               <img
                 class="box"
                 src="assets/icons/Community.svg"
@@ -456,24 +459,78 @@
         <div class="calculator__content">
           <div class="calculator__content-power box">
             <h4 class="calculator__content-power-title">Buy GH/s power</h4>
-            <div class="calculator__content-power-options">
-              <div class="calculator__content-power-options-item">
+            <div class="calculator__content-power-content">
+              <div class="calculator__content-power-content-item">
                 <h6>Select coins:</h6>
-                <ul class="box">
-                  <li class="flex">
+                <select class="box calculator-item-pd">
+                  <option class="flex">
                     <img src="assets/img/TRX-Logo.svg" alt="TRX" /> Tron
-                  </li>
-                  <li class="flex">
+                  </option>
+                  <option class="flex">
                     <img src="assets/img/BTC-Logo.svg" alt="BTC" /> Bitcoin
-                  </li>
-                  <li class="flex">
+                  </option>
+                  <option class="flex">
                     <img src="assets/img/BNB-Logo.svg" alt="BNB" /> Binance Coin
-                  </li>
-                </ul>
+                  </option>
+                </select>
+              </div>
+
+              <div class="calculator__content-power-content-item">
+                <h6>Select network:</h6>
+                <select class="box calculator-item-pd">
+                  <option class="flex">
+                    <img src="assets/img/TRX-Logo.svg" alt="TRX" /> TRC 20
+                  </option>
+                  <option class="flex">
+                    <img src="assets/img/BTC-Logo.svg" alt="BTC" /> TRC 20
+                  </option>
+                  <option class="flex">
+                    <img src="assets/img/BNB-Logo.svg" alt="BNB" /> TRC 20
+                  </option>
+                </select>
+              </div>
+
+              <div class="calculator__content-power-content-item">
+                <h6>Amount deposit:</h6>
+                <input class="box calculator-item-pd" type="number" />
+              </div>
+
+              <div class="calculator__content-power-content-item">
+                <h6>Amount of GH/s:</h6>
+                <input class="box calculator-item-pd" type="number" />
               </div>
             </div>
           </div>
-          <div class="calculator__content-profit box"></div>
+          <div class="calculator__content-profit box">
+            <h4 class="calculator__content-profit-title">
+              Your estimate profit
+            </h4>
+            <div class="calculator__content-profit-content">
+              <div class="calculator__content-profit-content-item">
+                <h6>Your plan:</h6>
+                <p>Special 4% per day</p>
+              </div>
+
+              <div class="calculator__content-profit-content-item">
+                <h6>Select time amount:</h6>
+                <select class="box calculator-item-pd">
+                  <option>Per one month</option>
+                  <option>Per one month</option>
+                  <option>Per one month</option>
+                </select>
+              </div>
+
+              <div class="calculator__content-profit-content-item">
+                <h6>Earning profit:</h6>
+                <div class="flex box calculator-item-pd">
+                  <p>25 300.34</p>
+                  <span>TRON</span>
+                </div>
+              </div>
+
+              <button class="btn btn--blue">Buy now</button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -481,7 +538,7 @@
         <h2 class="transactions__title">Transactions</h2>
 
         <ul class="transactions__list box">
-          <li class="flex">
+          <li>
             <div class="flex">
               <img src="assets/img/BTC-Logo.svg" alt="Logo" />
 
@@ -491,13 +548,15 @@
 
             <p>
               TXID:
-              <span>000000000000000000000000000000000000</span>
+              <span
+                >000000000000000000000000000000000000000000000000000000000000</span
+              >
             </p>
 
             <p class="transactions__list-type">Deposit</p>
           </li>
 
-          <li class="flex">
+          <li>
             <div class="flex">
               <img src="assets/img/ETH-Logo.svg" alt="Logo" />
 
@@ -507,13 +566,15 @@
 
             <p>
               TXID:
-              <span>000000000000000000000000000000000000</span>
+              <span
+                >000000000000000000000000000000000000000000000000000000000000</span
+              >
             </p>
 
             <p class="transactions__list-type withdrawal">Withdrawal</p>
           </li>
 
-          <li class="flex">
+          <li>
             <div class="flex">
               <img src="assets/img/BNB-Logo.svg" alt="Logo" />
 
@@ -523,13 +584,15 @@
 
             <p>
               TXID:
-              <span>000000000000000000000000000000000000</span>
+              <span
+                >000000000000000000000000000000000000000000000000000000000000</span
+              >
             </p>
 
             <p class="transactions__list-type">Deposit</p>
           </li>
 
-          <li class="flex">
+          <li>
             <div class="flex">
               <img src="assets/img/USDT-Logo.svg" alt="Logo" />
 
@@ -539,13 +602,15 @@
 
             <p>
               TXID:
-              <span>000000000000000000000000000000000000</span>
+              <span
+                >000000000000000000000000000000000000000000000000000000000000</span
+              >
             </p>
 
             <p class="transactions__list-type">Deposit</p>
           </li>
 
-          <li class="flex">
+          <li>
             <div class="flex">
               <img src="assets/img/TRX-Logo.svg" alt="Logo" />
 
@@ -555,13 +620,15 @@
 
             <p>
               TXID:
-              <span>000000000000000000000000000000000000</span>
+              <span
+                >000000000000000000000000000000000000000000000000000000000000</span
+              >
             </p>
 
             <p class="transactions__list-type">Deposit</p>
           </li>
 
-          <li class="flex">
+          <li>
             <div class="flex">
               <img src="assets/img/XRP-Logo.svg" alt="Logo" />
 
@@ -571,21 +638,25 @@
 
             <p>
               TXID:
-              <span>000000000000000000000000000000000000</span>
+              <span
+                >000000000000000000000000000000000000000000000000000000000000</span
+              >
             </p>
 
             <p class="transactions__list-type">Deposit</p>
           </li>
         </ul>
       </section>
-
-      <footer class="footer flex">
-        <div>
-          <a class="footer__title" href="/">CRYPTON.CC</a>
-          <a class="footer__terms" href="#">Terms of use</a>
-        </div>
-        <p>&copy; 2023 Crypton.cc Cloud Mining. All rights reserved.</p>
-      </footer>
     </main>
+
+    <footer class="footer flex">
+      <div class="flex">
+        <a class="footer__title" href="/">CRYPTON.CC</a>
+        <a class="footer__terms" href="#">Terms of use</a>
+      </div>
+      <p>
+        &copy; 2023 Crypton.cc Cloud Mining. <span>All rights reserved.</span>
+      </p>
+    </footer>
   </body>
 </html>

@@ -2,13 +2,22 @@
 
 .transactions {
   &__title {
-    text-align: center;
+    display: grid;
+    place-items: center;
     margin-bottom: 46px;
   }
 
   &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 16px;
     li {
-      margin: 12px;
+      display: flex;
+      align-items: center;
+      column-gap: 48px;
 
       img {
         width: 40px;

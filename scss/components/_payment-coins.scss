@@ -18,11 +18,25 @@
       h5 {
         white-space: nowrap;
       }
+    }
+  }
+}
 
-      img {
-        width: 56px;
-        height: 56px;
-      }
+@media (max-width: 1280px) {
+  .payment-coins__list {
+    grid-template-columns: repeat(3, auto);
+    row-gap: 24px;
+  }
+}
+
+@media (max-width: 720px) {
+  .payment-coins__list {
+    grid-template-columns: repeat(2, auto);
+    row-gap: 24px;
+
+    img {
+      width: 36px;
+      height: 36px;
     }
   }
 }

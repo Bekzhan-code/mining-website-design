@@ -6,8 +6,10 @@
 
   &__illustration {
     position: relative;
-    width: 70vw;
-    height: 528px;
+    font-size: 1rem;
+    min-width: 35.375em;
+    height: 33em;
+    white-space: nowrap;
 
     &-background,
     &-trader,
@@ -16,77 +18,105 @@
     }
 
     &-sm-ellipse {
-      left: 97px;
+      left: 6.0625em;
+      width: 24.0625em;
+      height: 24.0625em;
     }
 
     &-lg-ellipse {
-      left: 25px;
-      top: 47px;
+      left: 1.5625em;
+      top: 2.9375em;
+      width: 29em;
+      height: 29em;
     }
 
     &-globus {
-      left: 49px;
-      top: 19px;
+      left: 3.0625em;
+      top: 1.1875em;
+      width: 31.8125em;
+      height: 31.8125em;
     }
 
     &-crypto {
+      &-tether,
+      &-ripple,
+      &-dollar {
+        width: 2.6875em;
+        height: 2.6875em;
+      }
       &-bitcoin {
-        left: 432px;
-        top: 112px;
+        left: 27em;
+        top: 7em;
+        width: 3.75em;
+        height: 3.75em;
       }
 
       &-tether {
-        left: 367px;
-        top: 435px;
+        left: 22.375em;
+        top: 27.1875em;
       }
 
       &-ripple {
-        left: 325px;
-        top: 30px;
+        left: 20.3125em;
+        top: 1.875em;
       }
 
       &-dollar {
-        left: 44px;
-        top: 123px;
+        left: 2.75em;
+        top: 7.6875em;
       }
 
       &-ethereum {
-        top: 368px;
+        top: 23em;
+        width: 5.125em;
+        height: 5.125em;
       }
     }
 
     &-trader {
-      padding: 24px;
-      display: inline-flex;
+      padding: 1.5em;
+      display: flex;
 
       &-countries {
-        top: 42px;
-        left: 77px;
+        top: 2.625em;
+        left: 4.8125em;
+        img {
+          width: 1.875em;
+          height: 1.875em;
+        }
       }
 
       &-location {
-        top: 229px;
-        left: 376px;
+        top: 14.3125em;
+        left: 23.5em;
+        img {
+          width: 2em;
+          height: 2em;
+        }
       }
 
       &-certification {
-        top: 307px;
-        left: 36px;
+        top: 19.1875em;
+        left: 2.25em;
+        img {
+          width: 3.5625em;
+          height: 3.875em;
+        }
       }
 
       img {
-        margin-right: 16px;
+        margin-right: 1em;
       }
 
       span {
-        font-size: 20px;
+        font-size: 1.25em;
         font-weight: 700;
-        margin-bottom: 4px;
+        margin-bottom: 0.25em;
         color: $blue;
       }
 
       p {
-        font-size: 18px;
+        font-size: 1.125em;
       }
     }
   }
@@ -103,18 +133,56 @@
       display: flex;
       flex-direction: column;
       row-gap: 24px;
-      img {
-        padding: 34px;
-        margin-right: 32px;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        column-gap: 32px;
+
+        img {
+          padding: 34px;
+        }
+
+        h4 {
+          margin-bottom: 8px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .features {
+    flex-direction: column;
+    row-gap: 24px;
+
+    &__content {
+      &-text {
+        text-align: center;
+      }
+
+      &-list-item {
+        column-gap: 16px;
+        align-items: start;
+
+        img {
+          padding: 17px;
+        }
       }
 
       h4 {
-        margin-bottom: 8px;
-      }
-
-      p {
-        font-size: 16px;
+        font-size: 24px;
       }
     }
+  }
+}
+
+@media (max-width: 720px) {
+  .features__illustration {
+    font-size: 0.6rem;
   }
 }

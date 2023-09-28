@@ -4,10 +4,15 @@
   text-align: center;
   &__title {
     margin-bottom: 46px;
+    font-size: 40px;
   }
 
   &__list {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
     &-item {
+      width: minmax(172px, 220px);
       padding: 16px 36px;
 
       h3 {
@@ -26,6 +31,22 @@
       position: relative;
       top: -50px;
       z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .statistics__list {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 24px 14px;
+
+    &-item {
+      padding: 16px;
+    }
+
+    &-dashed-line {
+      display: none;
     }
   }
 }
