@@ -969,13 +969,14 @@ img {
 }
 .faq__item {
   padding: 12px 0;
+  cursor: pointer;
 }
 .faq__item h4 {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 8px;
 }
-.faq__item-accordion {
+.faq__item p {
   display: none;
 }
 .faq__item span {
@@ -993,17 +994,15 @@ img {
   background-color: #fff;
   border-radius: 20px;
 }
-.faq__item.active__item-accordion {
+.faq__item.active p {
   display: block;
   font-size: 20px;
   color: #bebebe;
-}
-.faq__item.active__item-accordion p {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   margin-bottom: 36px;
 }
-.faq__item.active__item span::before {
+.faq__item.active span::before {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   -webkit-transition: all 0.3s ease 0s;
