@@ -2,7 +2,7 @@
 
 .payment-coins {
   &__title {
-    font-size: 40px;
+    font-size: 40px !important;
     text-align: center;
     margin: 46px 0;
   }
@@ -17,6 +17,7 @@
 
       h5 {
         white-space: nowrap;
+        color: #fff;
       }
     }
   }

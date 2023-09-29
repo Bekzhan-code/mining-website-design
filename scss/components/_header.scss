@@ -15,19 +15,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-width: 57vw;
+    min-width: 60vw;
     ul {
       border: $border;
       border-radius: 16px;
       padding: $padding;
-      min-width: 384px;
+      min-width: 579px;
 
       li {
-        color: $gray;
-        font-weight: 500;
+        a {
+          color: $gray;
+          font-weight: 500;
 
-        &.active {
-          color: $white;
+          &.active {
+            color: $white;
+          }
         }
       }
     }
@@ -42,7 +44,7 @@
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
   body.lock {
     overflow: hidden;
   }

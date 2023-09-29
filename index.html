@@ -15,16 +15,20 @@
 
       <nav class="header__nav">
         <ul class="flex">
-          <li><a class="active" href="/">Home</a></li>
-          <li><a href="/about">About us</a></li>
-          <li><a href="/plans">Plans</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/faq">FAQ</a></li>
+          <li><a class="header__nav-item" href="/">Home</a></li>
+          <li><a class="header__nav-item" href="about.html">About us</a></li>
+          <li><a class="header__nav-item" href="/plans">Plans</a></li>
+          <li><a class="header__nav-item" href="/statistics">Statistics</a></li>
+          <li><a class="header__nav-item" href="/calculator">Calculator</a></li>
+          <li><a class="header__nav-item" href="support.html">Contact</a></li>
+          <li><a class="header__nav-item" href="faq.html">FAQ</a></li>
         </ul>
 
         <div class="header__nav-btns">
-          <a href="/login"><button class="btn btn--header">Login</button></a>
-          <a href="/register"
+          <a href="sign-in.html"
+            ><button class="btn btn--header">Login</button></a
+          >
+          <a href="sign-up.html"
             ><button class="btn btn--blue btn--header">Register</button></a
           >
         </div>
@@ -34,32 +38,36 @@
 
     <main>
       <section class="hero">
-        <h1 class="hero__title">
-          Mine 5 coins today and get your profit increase
-        </h1>
-        <h4 class="hero__descr">
-          Whether you choose to utilize our Cloud Mining service or prefer to
-          acquire cryptocurrencies directly.
-        </h4>
-        <div class="hero__authentication-btns">
-          <a href="/login"><button class="btn">Sign-In</button></a>
-          <a href="/register"><button class="btn btn--blue">Sign-Up</button></a>
+        <div class="hero__top">
+          <h1>Mine 5 coins today and get your profit increase</h1>
+          <h4>
+            Whether you choose to utilize our Cloud Mining service or prefer to
+            acquire cryptocurrencies directly.
+          </h4>
+          <div class="hero__authentication-btns">
+            <a href="/login"><button class="btn">Sign-In</button></a>
+            <a href="/register"
+              ><button class="btn btn--blue">Sign-Up</button></a
+            >
+          </div>
+          <a class="hero__discover" href="#plans">
+            <img src="assets/icons/Caret_Down.svg" alt="Caret Down" />
+            Discover More
+          </a>
         </div>
-        <a class="hero__discover" href="#plans">
-          <img src="assets/icons/Caret_Down.svg" alt="Caret Down" />
-          Discover More
-        </a>
         <div class="hero__illustration">
           <div class="hero__illustration-item box--exclude-radius">
             <div class="hero__illustration-item-top">
-              <img
-                class="hero__illustration-item-logo"
-                src="assets/img/BTC-Logo.svg"
-                alt="Logo"
-              />
-              <div class="hero__illustration-item-info">
-                <p>Bitcoin</p>
-                <span>15 000 GH/s</span>
+              <div class="flex">
+                <img
+                  class="hero__illustration-item-logo"
+                  src="assets/img/BTC-Logo.svg"
+                  alt="Logo"
+                />
+                <div class="hero__illustration-item-info">
+                  <p>Bitcoin</p>
+                  <span>15 000 GH/s</span>
+                </div>
               </div>
               <span class="hero__illustration-item-crypto-symbol">BTC</span>
             </div>
@@ -71,14 +79,16 @@
 
           <div class="hero__illustration-item box--exclude-radius">
             <div class="hero__illustration-item-top">
-              <img
-                class="hero__illustration-item-logo"
-                src="assets/img/ETH-Logo.svg"
-                alt="Logo"
-              />
-              <div class="hero__illustration-item-info">
-                <p>Ethereum</p>
-                <span>5 000 GH/s</span>
+              <div class="flex">
+                <img
+                  class="hero__illustration-item-logo"
+                  src="assets/img/ETH-Logo.svg"
+                  alt="Logo"
+                />
+                <div class="hero__illustration-item-info">
+                  <p>Ethereum</p>
+                  <span>5 000 GH/s</span>
+                </div>
               </div>
               <span class="hero__illustration-item-crypto-symbol">ETH</span>
             </div>
@@ -90,14 +100,16 @@
 
           <div class="hero__illustration-item box--exclude-radius">
             <div class="hero__illustration-item-top">
-              <img
-                class="hero__illustration-item-logo"
-                src="assets/img/BNB-Logo.svg"
-                alt="Logo"
-              />
-              <div class="hero__illustration-item-info">
-                <p>Binance Coin</p>
-                <span>10 000 GH/s</span>
+              <div class="flex">
+                <img
+                  class="hero__illustration-item-logo"
+                  src="assets/img/BNB-Logo.svg"
+                  alt="Logo"
+                />
+                <div class="hero__illustration-item-info">
+                  <p>Binance Coin</p>
+                  <span>10 000 GH/s</span>
+                </div>
               </div>
               <span class="hero__illustration-item-crypto-symbol">BNB</span>
             </div>
@@ -109,14 +121,16 @@
 
           <div class="hero__illustration-item box--exclude-radius">
             <div class="hero__illustration-item-top">
-              <img
-                class="hero__illustration-item-logo"
-                src="assets/img/XRP-Logo.svg"
-                alt="Logo"
-              />
-              <div class="hero__illustration-item-info">
-                <p>Ripple</p>
-                <span>20 000 GH/s</span>
+              <div class="flex">
+                <img
+                  class="hero__illustration-item-logo"
+                  src="assets/img/XRP-Logo.svg"
+                  alt="Logo"
+                />
+                <div class="hero__illustration-item-info">
+                  <p>Ripple</p>
+                  <span>20 000 GH/s</span>
+                </div>
               </div>
               <span class="hero__illustration-item-crypto-symbol">XRP</span>
             </div>
@@ -128,14 +142,16 @@
 
           <div class="hero__illustration-item box--exclude-radius">
             <div class="hero__illustration-item-top">
-              <img
-                class="hero__illustration-item-logo"
-                src="assets/img/USDT-Logo.svg"
-                alt="Logo"
-              />
-              <div class="hero__illustration-item-info">
-                <p>Tether</p>
-                <span>20 000 GH/s</span>
+              <div class="flex">
+                <img
+                  class="hero__illustration-item-logo"
+                  src="assets/img/USDT-Logo.svg"
+                  alt="Logo"
+                />
+                <div class="hero__illustration-item-info">
+                  <p>Tether</p>
+                  <span>20 000 GH/s</span>
+                </div>
               </div>
               <span class="hero__illustration-item-crypto-symbol">USDT</span>
             </div>
@@ -147,14 +163,16 @@
 
           <div class="hero__illustration-item box--exclude-radius">
             <div class="hero__illustration-item-top">
-              <img
-                class="hero__illustration-item-logo"
-                src="assets/img/TRX-Logo.svg"
-                alt="Logo"
-              />
-              <div class="hero__illustration-item-info">
-                <p>Tron</p>
-                <span>25 000 GH/s</span>
+              <div class="flex">
+                <img
+                  class="hero__illustration-item-logo"
+                  src="assets/img/TRX-Logo.svg"
+                  alt="Logo"
+                />
+                <div class="hero__illustration-item-info">
+                  <p>Tron</p>
+                  <span>25 000 GH/s</span>
+                </div>
               </div>
               <span class="hero__illustration-item-crypto-symbol">TRX</span>
             </div>
@@ -541,109 +559,114 @@
           <li>
             <div class="flex">
               <img src="assets/img/BTC-Logo.svg" alt="Logo" />
-
-              <p>Amount: <span>0.000000000</span></p>
             </div>
-            <p>Date: <span>1970-00-00 00:00</span></p>
+            <div class="transactions__data flex">
+              <p>Amount: <span>0.000000000</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
 
-            <p>
-              TXID:
-              <span
-                >000000000000000000000000000000000000000000000000000000000000</span
-              >
-            </p>
+              <p>
+                TXID:
+                <span
+                  >000000000000000000000000000000000000000000000000000000000000</span
+                >
+              </p>
+            </div>
 
-            <p class="transactions__list-type">Deposit</p>
+            <p class="transactions__type">Deposit</p>
           </li>
 
           <li>
             <div class="flex">
               <img src="assets/img/ETH-Logo.svg" alt="Logo" />
-
-              <p>Amount: <span>0.000000000</span></p>
             </div>
-            <p>Date: <span>1970-00-00 00:00</span></p>
+            <div class="transactions__data flex">
+              <p>Amount: <span>0.000000000</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
 
-            <p>
-              TXID:
-              <span
-                >000000000000000000000000000000000000000000000000000000000000</span
-              >
-            </p>
+              <p>
+                TXID:
+                <span
+                  >000000000000000000000000000000000000000000000000000000000000</span
+                >
+              </p>
+            </div>
 
-            <p class="transactions__list-type withdrawal">Withdrawal</p>
+            <p class="transactions__type withdrawal">Withdrawal</p>
           </li>
 
           <li>
             <div class="flex">
               <img src="assets/img/BNB-Logo.svg" alt="Logo" />
-
-              <p>Amount: <span>0.000000000</span></p>
             </div>
-            <p>Date: <span>1970-00-00 00:00</span></p>
+            <div class="transactions__data flex">
+              <p>Amount: <span>0.000000000</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
 
-            <p>
-              TXID:
-              <span
-                >000000000000000000000000000000000000000000000000000000000000</span
-              >
-            </p>
+              <p>
+                TXID:
+                <span
+                  >000000000000000000000000000000000000000000000000000000000000</span
+                >
+              </p>
+            </div>
 
-            <p class="transactions__list-type">Deposit</p>
+            <p class="transactions__type">Deposit</p>
           </li>
 
           <li>
             <div class="flex">
               <img src="assets/img/USDT-Logo.svg" alt="Logo" />
-
-              <p>Amount: <span>0.000000000</span></p>
             </div>
-            <p>Date: <span>1970-00-00 00:00</span></p>
+            <div class="transactions__data flex">
+              <p>Amount: <span>0.000000000</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
 
-            <p>
-              TXID:
-              <span
-                >000000000000000000000000000000000000000000000000000000000000</span
-              >
-            </p>
+              <p>
+                TXID:
+                <span
+                  >000000000000000000000000000000000000000000000000000000000000</span
+                >
+              </p>
+            </div>
 
-            <p class="transactions__list-type">Deposit</p>
+            <p class="transactions__type">Deposit</p>
           </li>
 
           <li>
             <div class="flex">
               <img src="assets/img/TRX-Logo.svg" alt="Logo" />
-
-              <p>Amount: <span>0.000000000</span></p>
             </div>
-            <p>Date: <span>1970-00-00 00:00</span></p>
+            <div class="transactions__data flex">
+              <p>Amount: <span>0.000000000</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
 
-            <p>
-              TXID:
-              <span
-                >000000000000000000000000000000000000000000000000000000000000</span
-              >
-            </p>
+              <p>
+                TXID:
+                <span
+                  >000000000000000000000000000000000000000000000000000000000000</span
+                >
+              </p>
+            </div>
 
-            <p class="transactions__list-type">Deposit</p>
+            <p class="transactions__type">Deposit</p>
           </li>
 
           <li>
             <div class="flex">
               <img src="assets/img/XRP-Logo.svg" alt="Logo" />
-
-              <p>Amount: <span>0.000000000</span></p>
             </div>
-            <p>Date: <span>1970-00-00 00:00</span></p>
+            <div class="transactions__data flex">
+              <p>Amount: <span>0.000000000</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
 
-            <p>
-              TXID:
-              <span
-                >000000000000000000000000000000000000000000000000000000000000</span
-              >
-            </p>
-
-            <p class="transactions__list-type">Deposit</p>
+              <p>
+                TXID:
+                <span
+                  >000000000000000000000000000000000000000000000000000000000000</span
+                >
+              </p>
+            </div>
+            <p class="transactions__type">Deposit</p>
           </li>
         </ul>
       </section>

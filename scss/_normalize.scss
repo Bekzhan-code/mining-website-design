@@ -38,6 +38,10 @@ img {
 input,
 textarea {
   font: inherit;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 a {

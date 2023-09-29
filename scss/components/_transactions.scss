@@ -11,38 +11,41 @@
     display: flex;
     flex-direction: column;
     row-gap: 24px;
-    overflow-x: auto;
-    white-space: nowrap;
+    overflow: auto;
+    scroll-padding-right: 16px;
     padding: 20px 16px;
     li {
       display: flex;
       align-items: center;
-      column-gap: 48px;
+      column-gap: 7px;
 
       img {
-        width: 40px;
-        height: 40px;
-        margin-right: 20px;
-      }
-
-      p {
-        font-weight: 400;
-
-        span {
-          font-weight: 600;
-        }
+        min-width: 40px;
       }
     }
+  }
 
-    &-type {
-      font-weight: 700;
-      color: $green;
-      min-width: 117px;
-      text-align: end;
+  &__data {
+    font-family: "Source Code Pro";
+    min-width: 1107px;
 
-      &.withdrawal {
-        color: $orange;
+    p {
+      font-weight: 400;
+
+      span {
+        font-weight: 600;
       }
+    }
+  }
+
+  &__type {
+    font-weight: 700;
+    color: $green;
+    min-width: 118px;
+    text-align: end;
+
+    &.withdrawal {
+      color: $orange;
     }
   }
 }

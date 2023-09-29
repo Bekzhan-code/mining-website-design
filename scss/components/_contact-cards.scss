@@ -1,0 +1,36 @@
+@import "../variables";
+
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+
+  &__item {
+    padding: 24px 20px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    &-text {
+      p {
+        font-size: 14px;
+      }
+      span {
+        margin-bottom: 8px;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+
+    img {
+      width: 64px;
+      height: 64px;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}

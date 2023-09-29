@@ -1,0 +1,83 @@
+@import "../variables";
+
+.authentication-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 812px;
+  max-width: 416px;
+  margin: 60px auto 80px auto;
+  padding: 36px 24px;
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+
+    span {
+      font-weight: 900;
+      font-size: 20px;
+    }
+
+    &-text {
+      h4 {
+        margin-bottom: 12px;
+        font-weight: 800;
+      }
+    }
+
+    &-input {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+
+      &-box {
+        input {
+          border: none;
+        }
+      }
+
+      p {
+        margin-bottom: 12px;
+      }
+
+      input {
+        width: 100%;
+        background-color: #151515;
+
+        border-radius: $border-radius;
+        padding: 12px;
+      }
+
+      img {
+        margin-right: 12px;
+      }
+
+      a {
+        color: $gray;
+        text-decoration: underline;
+      }
+    }
+
+    &-btns {
+      text-align: center;
+      button {
+        width: 100%;
+        margin-bottom: 12px;
+      }
+
+      a {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+
+    span {
+      color: $gray;
+    }
+  }
+}
