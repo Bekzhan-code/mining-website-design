@@ -12,7 +12,7 @@
   <body>
     <main class="container">
       <header class="header flex">
-        <a class="header__title" href="/">CRYPTON.CC</a>
+        <a class="header__title" href="index.html">CRYPTON.CC</a>
 
         <nav class="header__nav">
           <ul class="flex">
@@ -53,24 +53,44 @@
           <div class="authentication-block__top-input">
             <div>
               <p>Enter your Email:</p>
-              <input class="box" type="text" />
+              <input
+                class="box box--black-background"
+                type="text"
+                placeholder="email@mail.com"
+              />
             </div>
             <div>
               <p>Enter your password:</p>
               <div
-                class="authentication-block__top-input-box box box--black flex"
+                class="authentication-block__top-input-box box box--black-background flex"
               >
-                <input type="password" />
-                <img src="assets/icons/eye-close.svg" alt="Eye close" />
+                <input
+                  id="password-input"
+                  type="password"
+                  placeholder="********"
+                />
+                <img
+                  id="toggle-password-img"
+                  src="assets/icons/eye-close.svg"
+                  alt="Eye close"
+                />
               </div>
             </div>
             <div>
               <p>Confirm your password:</p>
               <div
-                class="authentication-block__top-input-box box box--black flex"
+                class="authentication-block__top-input-box box box--black-background flex"
               >
-                <input type="password" />
-                <img src="assets/icons/eye-close.svg" alt="Eye close" />
+                <input
+                  id="password-confirm-input"
+                  type="password"
+                  placeholder="********"
+                />
+                <img
+                  id="toggle-confirm-password-img"
+                  src="assets/icons/eye-close.svg"
+                  alt="Eye close"
+                />
               </div>
             </div>
           </div>

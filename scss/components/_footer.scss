@@ -28,7 +28,12 @@
     row-gap: 24px;
   }
 
-  .footer--large {
-    margin-top: 0px;
+  .footer {
+    &__title {
+      margin: 0;
+    }
+    &--large {
+      margin-top: 0px;
+    }
   }
 }

@@ -22,7 +22,7 @@ html {
 
 body {
   font-family: "Noto Sans";
-  background-color: #000;
+  background-color: #0f0f0f;
   background-repeat: no-repeat;
 }
 
@@ -785,11 +785,8 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.calculator__content-profit {
-  position: relative;
-  left: -1px;
-}
 .calculator__content-power, .calculator__content-profit {
+  border-radius: 12px;
   width: 340px;
   padding: 24px 32px;
 }
@@ -816,6 +813,15 @@ img {
           justify-content: start;
   margin: 12px;
 }
+.calculator__content-power {
+  border-bottom-right-radius: 0;
+}
+.calculator__content-profit {
+  position: relative;
+  left: -1px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
 
 @media (max-width: 960px) {
   .calculator__text {
@@ -830,9 +836,16 @@ img {
         -ms-flex-align: center;
             align-items: center;
   }
+  .calculator__content-power {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
   .calculator__content-profit {
     left: 0px;
     top: -1px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 12px;
   }
 }
 .transactions__title {
@@ -914,6 +927,9 @@ img {
             flex-direction: column;
     row-gap: 24px;
   }
+  .footer__title {
+    margin: 0;
+  }
   .footer--large {
     margin-top: 0px;
   }
@@ -931,6 +947,7 @@ img {
 }
 .contact-cards__item {
   padding: 24px 20px;
+  min-width: 306px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -956,6 +973,12 @@ img {
   width: 100%;
 }
 
+@media (max-width: 960px) {
+  .contact-cards__item {
+    min-width: 340px;
+    padding: 24px;
+  }
+}
 .faq {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1056,6 +1079,9 @@ img {
 .authentication-block__top-input-box input {
   border: none;
 }
+.authentication-block__top-input-box img {
+  cursor: pointer;
+}
 .authentication-block__top-input p {
   margin-bottom: 12px;
 }
@@ -1115,7 +1141,7 @@ img {
 .box--bigger-radius {
   border-radius: 20px;
 }
-.box--black {
+.box--black-background {
   background-color: #151515;
 }
 
