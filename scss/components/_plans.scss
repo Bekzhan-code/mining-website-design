@@ -1,14 +1,13 @@
 @import "../variables";
 
 .plans {
+  padding-top: 80px;
   &__text {
-    padding-top: 80px;
     text-align: center;
     margin: 0 auto 46px auto;
-    width: 40vw;
   }
 
-  &__descr {
+  &__title {
     margin-bottom: 24px;
   }
 }
@@ -65,3 +64,19 @@
     }
   }
 }
+
+// @media (max-width: 480px) {
+//   .plans {
+//     padding-top: 24px;
+//     margin-top: 16px;
+//     margin-bottom: 64px;
+
+//     &__text {
+//       margin-bottom: 24px;
+//     }
+
+//     &__title {
+//       margin-bottom: 20px;
+//     }
+//   }
+// }

@@ -1,22 +1,25 @@
 @import "../variables";
 
 .payment-coins {
+  padding: 46px 0;
+  text-align: center;
+
   &__title {
-    font-size: 40px !important;
-    text-align: center;
-    margin: 46px 0;
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 46px;
+    font-weight: 700;
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(6, auto);
     column-gap: 24px;
-    margin-bottom: 46px;
+
     &-item {
       padding: $padding;
 
       h5 {
-        white-space: nowrap;
         color: #fff;
       }
     }
@@ -24,9 +27,15 @@
 }
 
 @media (max-width: 1280px) {
-  .payment-coins__list {
-    grid-template-columns: repeat(3, auto);
-    row-gap: 24px;
+  .payment-coins {
+    &__list {
+      grid-template-columns: repeat(3, auto);
+      row-gap: 24px;
+    }
+
+    &__title {
+      font-size: 32px;
+    }
   }
 }
 

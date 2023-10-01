@@ -5,6 +5,8 @@
   &__title {
     margin-bottom: 46px;
     font-size: 40px;
+    font-weight: 700;
+    color: #fff;
   }
 
   &__list {
@@ -32,6 +34,12 @@
       top: -50px;
       z-index: -1;
     }
+  }
+}
+
+@media (max-width: 1280px) {
+  .statistics__title {
+    font-size: 32px;
   }
 }
 

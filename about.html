@@ -16,10 +16,22 @@
       <nav class="header__nav">
         <ul class="flex">
           <li><a class="header__nav-item" href="index.html">Home</a></li>
-          <li><a class="header__nav-item" href="about.html">About us</a></li>
-          <li><a class="header__nav-item" href="/plans">Plans</a></li>
-          <li><a class="header__nav-item" href="/statistics">Statistics</a></li>
-          <li><a class="header__nav-item" href="/calculator">Calculator</a></li>
+          <li>
+            <a class="header__nav-item page-top" href="about.html">About us</a>
+          </li>
+          <li>
+            <a class="header__nav-item" href="index.html#plans-link">Plans</a>
+          </li>
+          <li>
+            <a class="header__nav-item statistics-link" href="#statistics-link"
+              >Statistics</a
+            >
+          </li>
+          <li>
+            <a class="header__nav-item" href="index.html#calculator-link"
+              >Calculator</a
+            >
+          </li>
           <li><a class="header__nav-item" href="support.html">Contact</a></li>
           <li><a class="header__nav-item" href="faq.html">FAQ</a></li>
         </ul>
@@ -37,9 +49,9 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero page-top">
         <h2 class="hero__title">About <span>Crypton.cc</span> cloud mining</h2>
-        <p class="hero__descr">
+        <p class="hero__descr hero__descr--bigger-margin">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -50,7 +62,7 @@
         </p>
       </section>
 
-      <section class="statistics">
+      <section class="statistics" id="statistics-link">
         <h2 class="statistics__title">Realtime statistics:</h2>
         <div class="statistics__list">
           <div class="statistics__list-item box box--bigger-radius">

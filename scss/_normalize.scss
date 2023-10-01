@@ -10,6 +10,14 @@
 }
 
 :-webkit-any(article, aside, nav, section) {
+  *,
+  *::after,
+  *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
   h1 {
     font-size: 64px;
   }
@@ -25,7 +33,7 @@ html {
 
 body {
   font-family: "Noto Sans";
-  background-color: #0f0f0f;
+  background-color: $body-background-color;
   background-repeat: no-repeat;
 }
 

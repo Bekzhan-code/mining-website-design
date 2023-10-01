@@ -10,15 +10,44 @@ headerBurger.addEventListener("click", () => {
 
 // HEADER NAVIGATION
 const navLinks = document.querySelectorAll(".header__nav-item");
-const windowPathname = window.location.pathname;
+const sections = document.querySelectorAll("section");
+const windowPath = window.location.href;
 
+// Добавляет класс 'active' для нажатой ссылки
 navLinks.forEach((link) => {
-  const linkPathname = new URL(link.href).pathname;
+  const linkPath = link.href;
 
-  if (windowPathname === linkPathname) {
+  if (windowPath[windowPath.length - 1] === "/") {
+    document.querySelector(".header__nav-item").classList.add("active");
+  } else if (windowPath === linkPath) {
     link.classList.add("active");
   }
 });
+
+// Добавляет класс 'active' по мере достижения конкретной секции в странице
+// page-top задана для того чтобы поменять активную ссылку с конкретной СЕКЦИИ на конкретуную  СТРАНИЦУ при достижении секции hero
+
+if (sections[0].classList.contains("page-top")) {
+  window.onscroll = () => {
+    let current;
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (scrollY >= sectionTop - 60) {
+        current = section.getAttribute("id");
+      } else if (section.classList.contains("hero")) {
+        current = "page-top";
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.classList.contains(current)) {
+        link.classList.add("active");
+      }
+    });
+  };
+}
 
 // FAQ question expanding
 const questions = document.querySelectorAll(".faq__item");

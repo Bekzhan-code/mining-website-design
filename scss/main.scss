@@ -61,3 +61,22 @@ body {
   width: 85vw;
   margin: 0 auto;
 }
+
+main {
+  margin-top: 80px;
+}
+
+@media (max-width: 480px) {
+  body {
+    background-image: none !important;
+  }
+
+  main {
+    display: flex !important;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+  .mobile-section {
+    padding: 24px 0;
+  }
+}

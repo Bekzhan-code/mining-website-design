@@ -1,6 +1,7 @@
 @import "../variables";
 
 .transactions {
+  padding: 80px 0;
   &__title {
     display: grid;
     place-items: center;
@@ -14,10 +15,12 @@
     overflow: auto;
     scroll-padding-right: 16px;
     padding: 20px 16px;
+
     li {
       display: flex;
       align-items: center;
       column-gap: 7px;
+      min-width: 1288px;
 
       img {
         min-width: 40px;
@@ -47,5 +50,11 @@
     &.withdrawal {
       color: $orange;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .transactions__list {
+    padding: 28px 35px;
   }
 }

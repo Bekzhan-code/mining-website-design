@@ -24,4 +24,8 @@
   &--full-width {
     width: 100%;
   }
+
+  &:hover {
+    background-color: $btn-hover-color;
+  }
 }

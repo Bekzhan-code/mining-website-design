@@ -28,7 +28,7 @@
 
   &__title {
     margin-bottom: 8px;
-    margin-top: 60px;
+    margin-top: 140px;
 
     span {
       color: $blue;
@@ -38,6 +38,10 @@
   &__descr {
     max-width: 636px;
     margin: 0 auto 48px auto;
+
+    &--bigger-margin {
+      margin-bottom: 60px;
+    }
   }
 
   &__authentication-btns {

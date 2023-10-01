@@ -15,11 +15,23 @@
 
       <nav class="header__nav">
         <ul class="flex">
-          <li><a class="header__nav-item" href="index.html">Home</a></li>
+          <li>
+            <a class="header__nav-item page-top" href="index.html">Home</a>
+          </li>
           <li><a class="header__nav-item" href="about.html">About us</a></li>
-          <li><a class="header__nav-item" href="/plans">Plans</a></li>
-          <li><a class="header__nav-item" href="/statistics">Statistics</a></li>
-          <li><a class="header__nav-item" href="/calculator">Calculator</a></li>
+          <li>
+            <a class="header__nav-item plans-link" href="#plans-link">Plans</a>
+          </li>
+          <li>
+            <a class="header__nav-item statistics-link" href="#statistics-link"
+              >Statistics</a
+            >
+          </li>
+          <li>
+            <a class="header__nav-item calculator-link" href="#calculator-link"
+              >Calculator</a
+            >
+          </li>
           <li><a class="header__nav-item" href="support.html">Contact</a></li>
           <li><a class="header__nav-item" href="faq.html">FAQ</a></li>
         </ul>
@@ -37,7 +49,7 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero page-top">
         <div class="hero__top">
           <h1>Mine 5 coins today and get your profit increase</h1>
           <h4>
@@ -185,7 +197,7 @@
         <div class="hero__illustration-underline"></div>
       </section>
 
-      <section class="plans" id="plans">
+      <section class="plans mobile-section plans-link" id="plans-link">
         <div class="plans__text">
           <h2 class="plans__title">We created plans</h2>
           <h5 class="plans__descr">
@@ -276,10 +288,10 @@
         </div>
       </section>
 
-      <section class="payment-coins">
-        <h2 class="payment-coins__title">
+      <section class="payment-coins mobile-section">
+        <p class="payment-coins__title">
           Pay with 6 different coins using any wallet you want
-        </h2>
+        </p>
 
         <div class="payment-coins__list">
           <div class="payment-coins__list-item flex box box--bigger-radius">
@@ -314,8 +326,11 @@
         </div>
       </section>
 
-      <section class="statistics">
-        <h2 class="statistics__title">Realtime statistics:</h2>
+      <section
+        class="statistics mobile-section statistics-link"
+        id="statistics-link"
+      >
+        <p class="statistics__title">Realtime statistics:</p>
         <div class="statistics__list">
           <div class="statistics__list-item box box--bigger-radius">
             <h3>72</h3>
@@ -340,8 +355,8 @@
         <div class="statistics__list-dashed-line"></div>
       </section>
 
-      <section class="features flex">
-        <div class="features__illustration">
+      <section class="features flex mobile-section">
+        <div class="features__illustration nowrap">
           <img
             class="features__illustration-sm-ellipse features__illustration-background"
             src="assets/img/small-ellipse.svg"
@@ -464,7 +479,10 @@
         </div>
       </section>
 
-      <section class="calculator">
+      <section
+        class="calculator mobile-section calculator-link"
+        id="calculator-link"
+      >
         <div class="calculator__text">
           <h2 class="calculator__title">Profit calculator</h2>
           <h5 class="calculator__descr">
@@ -552,10 +570,10 @@
         </div>
       </section>
 
-      <section class="transactions">
+      <section class="transactions mobile-section">
         <h2 class="transactions__title">Transactions</h2>
 
-        <ul class="transactions__list box">
+        <ul class="transactions__list box nowrap">
           <li>
             <div class="flex">
               <img src="assets/img/BTC-Logo.svg" alt="Logo" />
