@@ -35,16 +35,15 @@
           <li><a class="header__nav-item" href="support.html">Contact</a></li>
           <li><a class="header__nav-item" href="faq.html">FAQ</a></li>
         </ul>
-
-        <div class="header__nav-btns">
-          <a href="sign-in.html"
-            ><button class="btn btn--header">Login</button></a
-          >
-          <a href="sign-up.html"
-            ><button class="btn btn--blue btn--header">Register</button></a
-          >
-        </div>
       </nav>
+      <div class="header__authentication-btns">
+        <a href="sign-in.html"
+          ><button class="btn btn--header">Login</button></a
+        >
+        <a href="sign-up.html"
+          ><button class="btn btn--blue btn--header">Register</button></a
+        >
+      </div>
       <div class="header__burger"><span></span></div>
     </header>
 
@@ -62,7 +61,7 @@
               ><button class="btn btn--blue">Sign-Up</button></a
             >
           </div>
-          <a class="hero__discover" href="#plans">
+          <a class="hero__discover" href="#plans-link">
             <img src="assets/icons/Caret_Down.svg" alt="Caret Down" />
             Discover More
           </a>
@@ -492,75 +491,159 @@
           </h5>
         </div>
 
-        <div class="calculator__content">
-          <div class="calculator__content-power box--exclude-radius">
-            <h4 class="calculator__content-power-title">Buy GH/s power</h4>
-            <div class="calculator__content-power-content">
-              <div class="calculator__content-power-content-item">
-                <h6>Select coins:</h6>
-                <select class="box calculator-item-pd">
-                  <option class="flex">
-                    <img src="assets/img/TRX-Logo.svg" alt="TRX" /> Tron
-                  </option>
-                  <option class="flex">
-                    <img src="assets/img/BTC-Logo.svg" alt="BTC" /> Bitcoin
-                  </option>
-                  <option class="flex">
-                    <img src="assets/img/BNB-Logo.svg" alt="BNB" /> Binance Coin
-                  </option>
-                </select>
+        <div class="calculator__info">
+          <div class="calculator__info-power box--exclude-radius">
+            <h4 class="calculator__info-power-title">Buy GH/s power</h4>
+            <div class="calculator__info-power-content">
+              <div class="calculator__info-power-content-body">
+                <div class="calculator__info-power-content-body-item">
+                  <label>Select coins:</label>
+                  <div
+                    class="calculator__info-power-selected-coin box calculator__input-item--smaller-padding flex"
+                  >
+                    <div class="flex" style="height: 40px">
+                      <img src="assets/img/TRX-Logo.svg" alt="TRX" />
+                      <p>Tron &#40;TRC-20&#41;</p>
+                    </div>
+
+                    <img
+                      src="assets/icons/caret-down-white.svg"
+                      alt="Caret down white"
+                    />
+                  </div>
+
+                  <ul
+                    class="calculator__info-power-coins-wrapper box calculator__input-item--smaller-padding"
+                  >
+                    <li class="calculator__info-power-coin selected">
+                      <img src="assets/img/TRX-Logo.svg" alt="TRX" />
+                      <p>Tron &#40;TRC-20&#41;</p>
+                    </li>
+                    <li class="calculator__info-power-coin">
+                      <img src="assets/img/BNB-Logo.svg" alt="BNB" />
+                      <p>BNB &#40;BEP-20&#41;</p>
+                    </li>
+                    <li class="calculator__info-power-coin">
+                      <img src="assets/img/USDT-Logo.svg" alt="USDT" />
+                      <p>Tether &#40;TRC-20&#41;</p>
+                    </li>
+                    <li class="calculator__info-power-coin">
+                      <img src="assets/img/BTC-Logo.svg" alt="USDT" />
+                      <p>Bitcoin &#40;BTC&#41;</p>
+                    </li>
+                    <li class="calculator__info-power-coin">
+                      <img src="assets/img/ETH-Logo.svg" alt="USDT" />
+                      <p>Ethereum &#40;ETH&#41;</p>
+                    </li>
+                    <li class="calculator__info-power-coin">
+                      <img src="assets/img/XRP-Logo.svg" alt="USDT" />
+                      <p>Ripple &#40;XRP&#41;</p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="calculator__info-power-content-body-item">
+                  <label>Amount deposit in coin:</label>
+                  <input class="box calculator__input-item" type="number" />
+                </div>
+
+                <div class="calculator__info-power-content-body-item">
+                  <label>Amount deposit in USD:</label>
+                  <input class="box calculator__input-item" type="number" />
+                </div>
               </div>
 
-              <div class="calculator__content-power-content-item">
-                <h6>Select network:</h6>
-                <select class="box calculator-item-pd">
-                  <option class="flex">
-                    <img src="assets/img/TRX-Logo.svg" alt="TRX" /> TRC 20
-                  </option>
-                  <option class="flex">
-                    <img src="assets/img/BTC-Logo.svg" alt="BTC" /> TRC 20
-                  </option>
-                  <option class="flex">
-                    <img src="assets/img/BNB-Logo.svg" alt="BNB" /> TRC 20
-                  </option>
-                </select>
-              </div>
+              <div class="calculator__info-power-content-bottom">
+                <label>Your plan:</label>
+                <div>
+                  <img src="assets/icons/lock-icon.svg" alt="Lock" />
+                  <span>Special 4% per day</span>
+                </div>
 
-              <div class="calculator__content-power-content-item">
-                <h6>Amount deposit:</h6>
-                <input class="box calculator-item-pd" type="number" />
-              </div>
-
-              <div class="calculator__content-power-content-item">
-                <h6>Amount of GH/s:</h6>
-                <input class="box calculator-item-pd" type="number" />
+                <label>Your power:</label>
+                <div>
+                  <img src="assets/icons/shield-icon.svg" alt="Shield" />
+                  <span>5000 GH/s</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="calculator__content-profit box--exclude-radius">
-            <h4 class="calculator__content-profit-title">
-              Your estimate profit
-            </h4>
-            <div class="calculator__content-profit-content">
-              <div class="calculator__content-profit-content-item">
-                <h6>Your plan:</h6>
-                <p>Special 4% per day</p>
-              </div>
 
-              <div class="calculator__content-profit-content-item">
-                <h6>Select time amount:</h6>
-                <select class="box calculator-item-pd">
-                  <option>Per one month</option>
-                  <option>Per one month</option>
-                  <option>Per one month</option>
-                </select>
-              </div>
+          <div class="calculator__info-profit box--exclude-radius">
+            <h4 class="calculator__info-profit-title">Your estimate profit</h4>
+            <div class="calculator__info-profit-content">
+              <div class="calculator__info-profit-content-body">
+                <div class="calculator__info-profit-content-body-item">
+                  <label>Select time amount:</label>
+                  <div
+                    class="calculator__info-profit-selected-day box calculator__input-item flex"
+                  >
+                    <p>Per 1 day</p>
+                    <img
+                      src="assets/icons/caret-down-white.svg"
+                      alt="Caret down white"
+                    />
+                  </div>
 
-              <div class="calculator__content-profit-content-item">
-                <h6>Earning profit:</h6>
-                <div class="flex box calculator-item-pd">
-                  <p>25 300.34</p>
-                  <span>TRON</span>
+                  <ul
+                    class="calculator__info-profit-days-wrapper box calculator__input-item"
+                  >
+                    <li
+                      class="calculator__info-profit-day calculator__time-amount selected"
+                    >
+                      <p>Per 1 day</p>
+                    </li>
+                    <li
+                      class="calculator__info-profit-day calculator__time-amount"
+                    >
+                      <p>Per 10 days</p>
+                    </li>
+                    <li
+                      class="calculator__info-profit-day calculator__time-amount"
+                    >
+                      <p>Per 30 days</p>
+                    </li>
+                    <li
+                      class="calculator__info-profit-day calculator__time-amount"
+                    >
+                      <p>Per 180 days</p>
+                    </li>
+                    <li
+                      class="calculator__info-profit-day calculator__time-amount"
+                    >
+                      <p>Per 365 days</p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="calculator__info-profit-content-body-item">
+                  <label>Earning profit:</label>
+                  <div
+                    class="flex box calculator__input-item--smaller-padding"
+                    style="margin-bottom: 12px"
+                  >
+                    <span class="calculator__info-profit-crypto-amount"
+                      >25 300.34</span
+                    >
+                    <div class="calculator__info-profit-selected-coin flex">
+                      <p>TRON &#40;TRC-20&#41;</p>
+                      <img src="assets/img/TRX-Logo.svg" alt="TRX" />
+                    </div>
+                  </div>
+
+                  <div class="flex box calculator__input-item--smaller-padding">
+                    <span class="calculator__info-profit-usd-amount"
+                      >1 600.00</span
+                    >
+                    <div class="flex">
+                      <p>USD</p>
+                      <img
+                        src="assets/img/USD-Logo.svg"
+                        alt="USD"
+                        style="margin-left: 12px"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
 

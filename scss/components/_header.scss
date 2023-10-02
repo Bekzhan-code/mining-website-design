@@ -21,16 +21,11 @@
   }
 
   &__nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-width: 60vw;
     ul {
       border: $border;
       border-radius: 16px;
       padding: $padding;
       min-width: 579px;
-      margin-right: 5px;
 
       li {
         a {
@@ -119,13 +114,6 @@
       justify-content: start;
       row-gap: 48px;
 
-      &-btns {
-        display: flex;
-        flex-direction: column;
-        row-gap: 12px;
-        align-self: start;
-      }
-
       &.active {
         right: 0;
       }
@@ -139,11 +127,27 @@
         padding: 0;
       }
     }
+
+    &__authentication-btns {
+      position: fixed;
+      right: -100%;
+      top: 320px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+      align-self: start;
+      transition: $transition;
+
+      &.active {
+        right: 160px;
+      }
+    }
   }
 }
 
 @media (max-width: 480px) {
   .header {
     padding: 12.5px 0;
+    width: 90vw;
   }
 }

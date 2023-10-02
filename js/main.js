@@ -1,10 +1,12 @@
 // HEADER BURGER
 const headerBurger = document.querySelector(".header__burger");
 const headerNav = document.querySelector(".header__nav");
+const headerAuthBtns = document.querySelector(".header__authentication-btns");
 
 headerBurger.addEventListener("click", () => {
   headerBurger.classList.toggle("active");
   headerNav.classList.toggle("active");
+  headerAuthBtns.classList.toggle("active");
   document.body.classList.toggle("lock");
 });
 
@@ -55,6 +57,72 @@ const questions = document.querySelectorAll(".faq__item");
 questions.forEach((q) => {
   q.addEventListener("click", () => {
     q.classList.toggle("active");
+  });
+});
+
+// Calculator options selecting
+const selectedCoin = document.querySelector(
+  ".calculator__info-power-selected-coin"
+);
+const selectedCoinProfit = document.querySelector(
+  ".calculator__info-profit-selected-coin"
+);
+const coinsWrapper = document.querySelector(
+  ".calculator__info-power-coins-wrapper"
+);
+const coinsList = document.querySelectorAll(".calculator__info-power-coin");
+
+selectedCoin.addEventListener("click", () => {
+  coinsWrapper.classList.toggle("active");
+});
+
+coinsList.forEach((coin, index) => {
+  coin.addEventListener("click", () => {
+    const imgRegex = /<img.*?>/;
+    const pRegex = /<p>.*?<\/p>/;
+    selectedCoin.innerHTML = selectedCoin.innerHTML
+      .replace(imgRegex, coin.innerHTML.match(imgRegex)[0])
+      .replace(pRegex, coin.innerHTML.match(pRegex)[0]);
+
+    selectedCoinProfit.innerHTML = selectedCoinProfit.innerHTML
+      .replace(pRegex, coin.innerHTML.match(pRegex)[0])
+      .replace(imgRegex, coin.innerHTML.match(imgRegex)[0]);
+
+    coin.classList.add("selected");
+    coinsWrapper.classList.toggle("active");
+
+    coinsList.forEach((c, i) => {
+      if (i !== index) c.classList.remove("selected");
+    });
+  });
+});
+
+const selectedDay = document.querySelector(
+  ".calculator__info-profit-selected-day"
+);
+const daysWrapper = document.querySelector(
+  ".calculator__info-profit-days-wrapper"
+);
+const daysList = document.querySelectorAll(".calculator__info-profit-day");
+
+selectedDay.addEventListener("click", () => {
+  daysWrapper.classList.toggle("active");
+});
+
+daysList.forEach((day, index) => {
+  day.addEventListener("click", () => {
+    const pRegex = /<p>.*?<\/p>/;
+    selectedDay.innerHTML = selectedDay.innerHTML.replace(
+      pRegex,
+      day.innerHTML.match(pRegex)[0]
+    );
+
+    day.classList.add("selected");
+    daysWrapper.classList.toggle("active");
+
+    daysList.forEach((d, i) => {
+      if (i != index) d.classList.remove("selected");
+    });
   });
 });
 

@@ -32,13 +32,12 @@
   }
 }
 
-.calculator-item-pd {
-  padding: 16px 20px;
-  width: 100%;
-}
-
 .nowrap {
   white-space: nowrap;
+}
+
+.cursor {
+  cursor: pointer;
 }
 
 /* || MAIN CLASSES */
@@ -60,6 +59,13 @@ body {
 .container {
   width: 85vw;
   margin: 0 auto;
+
+  &--full-height {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 main {

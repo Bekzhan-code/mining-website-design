@@ -140,24 +140,11 @@ img {
 .header__burger {
   display: none;
 }
-.header__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  min-width: 60vw;
-}
 .header__nav ul {
   border: 1px solid #3d3d3d;
   border-radius: 16px;
   padding: 8px 16px;
   min-width: 579px;
-  margin-right: 5px;
 }
 .header__nav ul li a {
   color: #6f6f6f;
@@ -238,18 +225,6 @@ img {
             justify-content: start;
     row-gap: 48px;
   }
-  .header__nav-btns {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    row-gap: 12px;
-    -ms-flex-item-align: start;
-        align-self: start;
-  }
   .header__nav.active {
     right: 0;
   }
@@ -266,10 +241,31 @@ img {
     min-width: 100%;
     padding: 0;
   }
+  .header__authentication-btns {
+    position: fixed;
+    right: -100%;
+    top: 320px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 12px;
+    -ms-flex-item-align: start;
+        align-self: start;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .header__authentication-btns.active {
+    right: 160px;
+  }
 }
 @media (max-width: 480px) {
   .header {
     padding: 12.5px 0;
+    width: 90vw;
   }
 }
 .btn {
@@ -812,6 +808,13 @@ img {
 .calculator {
   padding: 80px 0;
 }
+.calculator__input-item {
+  padding: 16px 20px;
+  width: 100%;
+}
+.calculator__input-item--smaller-padding {
+  padding: 9.5px 20px;
+}
 .calculator__text {
   text-align: center;
   margin: 0 auto 46px auto;
@@ -820,7 +823,7 @@ img {
 .calculator__title {
   margin-bottom: 24px;
 }
-.calculator__content {
+.calculator__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -831,16 +834,33 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.calculator__content-power, .calculator__content-profit {
+.calculator__info img {
+  max-width: 40px;
+  max-height: 40px;
+}
+.calculator__info label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+.calculator__info li {
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+.calculator__info li:hover {
+  background-color: #1c419f;
+}
+.calculator__info p {
+  color: #fff;
+  font-weight: 600;
+}
+.calculator__info input {
+  font-weight: 600;
+}
+.calculator__info-power, .calculator__info-profit {
   border-radius: 12px;
-  width: 340px;
+  width: 406px;
   padding: 24px 32px;
-}
-.calculator__content-power-title, .calculator__content-profit-title {
-  font-size: 20px;
-  margin-bottom: 24px;
-}
-.calculator__content-power-content, .calculator__content-profit-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -850,30 +870,120 @@ img {
           flex-direction: column;
   row-gap: 24px;
 }
-.calculator__content-power-content-item h6, .calculator__content-profit-content-item h6 {
-  margin-bottom: 4px;
+.calculator__info-power-title, .calculator__info-profit-title {
+  font-size: 20px;
+  text-align: center;
 }
-.calculator__content-power-content-item select option, .calculator__content-profit-content-item select option {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  margin: 12px;
+.calculator__info-power-content, .calculator__info-profit-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 24px;
 }
-.calculator__content-power {
+.calculator__info-power-content-body, .calculator__info-profit-content-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+}
+.calculator__info-power-content-bottom, .calculator__info-profit-content-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 12px;
+}
+.calculator__info-power-content-bottom div, .calculator__info-profit-content-bottom div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.calculator__info-power-content-bottom div img, .calculator__info-profit-content-bottom div img {
+  margin-right: 12px;
+}
+.calculator__info-power-content-bottom div span, .calculator__info-profit-content-bottom div span {
+  font-size: 18px;
+  font-weight: 800;
+}
+.calculator__info-power {
   border-bottom-right-radius: 0;
 }
-.calculator__content-profit {
+.calculator__info-power-selected-coin {
+  position: relative;
+  cursor: pointer;
+}
+.calculator__info-power-coins-wrapper {
+  position: absolute;
+  display: none;
+}
+.calculator__info-power-coins-wrapper.active {
+  display: block;
+}
+.calculator__info-power-coin, .calculator__info-power-selected-coin div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+}
+.calculator__info-profit {
   position: relative;
   left: -1px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+.calculator__info-profit-selected-day {
+  position: relative;
+  cursor: pointer;
+}
+.calculator__info-profit-days-wrapper {
+  position: absolute;
+  display: none;
+}
+.calculator__info-profit-days-wrapper.active {
+  display: block;
+}
+.calculator__info-profit-selected-coin {
+  text-transform: uppercase;
+  height: 40px;
+}
+.calculator__info-profit-selected-coin img {
+  margin-left: 12px;
+}
+.calculator__info-profit span {
+  color: #42d559;
+  font-weight: 600;
+}
 
 @media (max-width: 960px) {
+  .calculator__input-item {
+    padding: 12px 16px;
+  }
+  .calculator__input-item--smaller-padding {
+    padding: 4.5px 16px;
+  }
   .calculator__text {
     width: 100%;
   }
-  .calculator__content {
+  .calculator__info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -882,11 +992,19 @@ img {
         -ms-flex-align: center;
             align-items: center;
   }
-  .calculator__content-power {
+  .calculator__info img {
+    width: 33px;
+    height: 33px;
+  }
+  .calculator__info-power, .calculator__info-profit {
+    width: 340px;
+    padding: 20px 24px;
+  }
+  .calculator__info-power {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .calculator__content-profit {
+  .calculator__info-profit {
     left: 0px;
     top: -1px;
     border-top-left-radius: 0;
@@ -911,9 +1029,10 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 24px;
-  overflow: auto;
   scroll-padding-right: 16px;
   padding: 20px 16px;
+  max-width: 1330px;
+  overflow-x: auto;
 }
 .transactions__list li {
   display: -webkit-box;
@@ -955,6 +1074,12 @@ img {
     padding: 28px 35px;
   }
 }
+@media (min-width: 1580px) {
+  .transactions {
+    display: grid;
+    place-items: center;
+  }
+}
 .footer {
   padding: 24px 0;
   font-size: 16px;
@@ -968,9 +1093,6 @@ img {
   font-size: 20px;
   font-weight: 900;
   margin-right: 24px;
-}
-.footer--large {
-  margin-top: 269px;
 }
 
 @media (max-width: 960px) {
@@ -1200,13 +1322,12 @@ img {
   background-color: #151515;
 }
 
-.calculator-item-pd {
-  padding: 16px 20px;
-  width: 100%;
-}
-
 .nowrap {
   white-space: nowrap;
+}
+
+.cursor {
+  cursor: pointer;
 }
 
 /* || MAIN CLASSES */
@@ -1224,6 +1345,19 @@ body.about {
 .container {
   width: 85vw;
   margin: 0 auto;
+}
+.container--full-height {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 main {
