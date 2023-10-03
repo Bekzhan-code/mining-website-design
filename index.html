@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css" />
 
     <script src="js/main.js" defer></script>
+    <script src="js/calculator.js" defer></script>
     <title>Main Page</title>
   </head>
   <body class="main container">
@@ -515,28 +516,36 @@
                   <ul
                     class="calculator__info-power-coins-wrapper box calculator__input-item--smaller-padding"
                   >
-                    <li class="calculator__info-power-coin selected">
+                    <li
+                      class="calculator__info-power-coin selected"
+                      id="trx"
+                      value="10"
+                    >
                       <img src="assets/img/TRX-Logo.svg" alt="TRX" />
                       <p>Tron &#40;TRC-20&#41;</p>
                     </li>
-                    <li class="calculator__info-power-coin">
+                    <li class="calculator__info-power-coin" id="bnb" value="20">
                       <img src="assets/img/BNB-Logo.svg" alt="BNB" />
                       <p>BNB &#40;BEP-20&#41;</p>
                     </li>
-                    <li class="calculator__info-power-coin">
+                    <li
+                      class="calculator__info-power-coin"
+                      id="usdt"
+                      value="30"
+                    >
                       <img src="assets/img/USDT-Logo.svg" alt="USDT" />
                       <p>Tether &#40;TRC-20&#41;</p>
                     </li>
-                    <li class="calculator__info-power-coin">
-                      <img src="assets/img/BTC-Logo.svg" alt="USDT" />
+                    <li class="calculator__info-power-coin" id="btc" value="40">
+                      <img src="assets/img/BTC-Logo.svg" alt="BTC" />
                       <p>Bitcoin &#40;BTC&#41;</p>
                     </li>
-                    <li class="calculator__info-power-coin">
-                      <img src="assets/img/ETH-Logo.svg" alt="USDT" />
+                    <li class="calculator__info-power-coin" id="eth" value="50">
+                      <img src="assets/img/ETH-Logo.svg" alt="ETH" />
                       <p>Ethereum &#40;ETH&#41;</p>
                     </li>
-                    <li class="calculator__info-power-coin">
-                      <img src="assets/img/XRP-Logo.svg" alt="USDT" />
+                    <li class="calculator__info-power-coin" id="xrp" value="60">
+                      <img src="assets/img/XRP-Logo.svg" alt="XRP" />
                       <p>Ripple &#40;XRP&#41;</p>
                     </li>
                   </ul>
@@ -544,12 +553,21 @@
 
                 <div class="calculator__info-power-content-body-item">
                   <label>Amount deposit in coin:</label>
-                  <input class="box calculator__input-item" type="number" />
+                  <input
+                    class="box calculator__input-item"
+                    type="number"
+                    id="input_coins"
+                  />
                 </div>
 
                 <div class="calculator__info-power-content-body-item">
                   <label>Amount deposit in USD:</label>
-                  <input class="box calculator__input-item" type="number" />
+                  <input
+                    class="box calculator__input-item"
+                    type="number"
+                    id="input_usd"
+                    value="25"
+                  />
                 </div>
               </div>
 
@@ -557,13 +575,13 @@
                 <label>Your plan:</label>
                 <div>
                   <img src="assets/icons/lock-icon.svg" alt="Lock" />
-                  <span>Special 4% per day</span>
+                  <span>Special <span id="result_plan">4</span>% per day</span>
                 </div>
 
                 <label>Your power:</label>
                 <div>
                   <img src="assets/icons/shield-icon.svg" alt="Shield" />
-                  <span>5000 GH/s</span>
+                  <span><span id="result_ghs">5000</span> GH/s</span>
                 </div>
               </div>
             </div>
@@ -578,7 +596,7 @@
                   <div
                     class="calculator__info-profit-selected-day box calculator__input-item flex"
                   >
-                    <p>Per 1 day</p>
+                    <p>Per 30 days</p>
                     <img
                       src="assets/icons/caret-down-white.svg"
                       alt="Caret down white"
@@ -589,7 +607,7 @@
                     class="calculator__info-profit-days-wrapper box calculator__input-item"
                   >
                     <li
-                      class="calculator__info-profit-day calculator__time-amount selected"
+                      class="calculator__info-profit-day calculator__time-amount"
                     >
                       <p>Per 1 day</p>
                     </li>
@@ -599,7 +617,7 @@
                       <p>Per 10 days</p>
                     </li>
                     <li
-                      class="calculator__info-profit-day calculator__time-amount"
+                      class="calculator__info-profit-day calculator__time-amount selected"
                     >
                       <p>Per 30 days</p>
                     </li>
@@ -632,7 +650,9 @@
                   </div>
 
                   <div class="flex box calculator__input-item--smaller-padding">
-                    <span class="calculator__info-profit-usd-amount"
+                    <span
+                      class="calculator__info-profit-usd-amount"
+                      id="result_profit"
                       >1 600.00</span
                     >
                     <div class="flex">

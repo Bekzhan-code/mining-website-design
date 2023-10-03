@@ -72,31 +72,6 @@ const coinsWrapper = document.querySelector(
 );
 const coinsList = document.querySelectorAll(".calculator__info-power-coin");
 
-selectedCoin.addEventListener("click", () => {
-  coinsWrapper.classList.toggle("active");
-});
-
-coinsList.forEach((coin, index) => {
-  coin.addEventListener("click", () => {
-    const imgRegex = /<img.*?>/;
-    const pRegex = /<p>.*?<\/p>/;
-    selectedCoin.innerHTML = selectedCoin.innerHTML
-      .replace(imgRegex, coin.innerHTML.match(imgRegex)[0])
-      .replace(pRegex, coin.innerHTML.match(pRegex)[0]);
-
-    selectedCoinProfit.innerHTML = selectedCoinProfit.innerHTML
-      .replace(pRegex, coin.innerHTML.match(pRegex)[0])
-      .replace(imgRegex, coin.innerHTML.match(imgRegex)[0]);
-
-    coin.classList.add("selected");
-    coinsWrapper.classList.toggle("active");
-
-    coinsList.forEach((c, i) => {
-      if (i !== index) c.classList.remove("selected");
-    });
-  });
-});
-
 const selectedDay = document.querySelector(
   ".calculator__info-profit-selected-day"
 );
@@ -105,6 +80,44 @@ const daysWrapper = document.querySelector(
 );
 const daysList = document.querySelectorAll(".calculator__info-profit-day");
 
+const changeOption = (selectedElArr, regexArr, selectedItem, wrapper) => {
+  selectedElArr.forEach((selectedEl) => {
+    regexArr.forEach((regex) => {
+      selectedEl.innerHTML = selectedEl.innerHTML.replace(
+        regex,
+        selectedItem.innerHTML.match(regex)[0]
+      );
+    });
+  });
+
+  selectedItem.classList.add("selected");
+  wrapper.classList.toggle("active");
+};
+
+selectedCoin.addEventListener("click", () => {
+  coinsWrapper.classList.toggle("active");
+});
+
+coinsList.forEach((coin, index) => {
+  coin.addEventListener("click", () => {
+    const imgRegex = /<img.*?>/;
+    const pRegex = /<p>.*?<\/p>/;
+
+    changeOption(
+      [selectedCoin, selectedCoinProfit],
+      [imgRegex, pRegex],
+      coin,
+      coinsWrapper
+    );
+
+    changeCoin(coin.id);
+
+    coinsList.forEach((c, i) => {
+      if (i !== index) c.classList.remove("selected");
+    });
+  });
+});
+
 selectedDay.addEventListener("click", () => {
   daysWrapper.classList.toggle("active");
 });
@@ -112,13 +125,9 @@ selectedDay.addEventListener("click", () => {
 daysList.forEach((day, index) => {
   day.addEventListener("click", () => {
     const pRegex = /<p>.*?<\/p>/;
-    selectedDay.innerHTML = selectedDay.innerHTML.replace(
-      pRegex,
-      day.innerHTML.match(pRegex)[0]
-    );
+    changeOption([selectedDay], [pRegex], day, daysWrapper);
 
-    day.classList.add("selected");
-    daysWrapper.classList.toggle("active");
+    setPeriod(Number(day.innerText.replace(/\D/g, "")));
 
     daysList.forEach((d, i) => {
       if (i != index) d.classList.remove("selected");
