@@ -2,6 +2,7 @@
 
 .hero {
   text-align: center;
+  padding-top: 60px;
 
   &__top {
     display: flex;
@@ -28,7 +29,6 @@
 
   &__title {
     margin-bottom: 8px;
-    margin-top: 140px;
 
     span {
       color: $blue;

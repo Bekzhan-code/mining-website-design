@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="js/main.js" defer></script>
+    <title>Dashboard</title>
+  </head>
+  <body class="container">
+    <header class="header flex">
+      <a class="header__title" href="index.html">CRYPTON.CC</a>
+
+      <nav class="header__nav">
+        <ul class="flex">
+          <li>
+            <a class="header__nav-item page-top" href="index.html">Home</a>
+          </li>
+          <li>
+            <a class="header__nav-item" href="dashboard.html">Dashboard</a>
+          </li>
+          <li>
+            <a class="header__nav-item" href="deposit.html">Deposit</a>
+          </li>
+          <li>
+            <a class="header__nav-item" href="affiliate.html">Affiliate</a>
+          </li>
+          <li>
+            <a class="header__nav-item" href="bonuses.html">Bonuses</a>
+          </li>
+          <li>
+            <a class="header__nav-item" href="bounty.html">Bounty</a>
+          </li>
+          <li><a class="header__nav-item" href="support.html">Contacts</a></li>
+          <li><a class="header__nav-item" href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="header__authentication-btns">
+        <button class="btn btn--blue btn--header">Logout</button>
+      </div>
+      <div class="header__burger"><span></span></div>
+    </header>
+
+    <main class="user-page">
+      <section class="email-verification flex">
+        <p>Please, verify email to get fill access to Crypton.cc</p>
+        <a href="#">Send verification link</a>
+      </section>
+
+      <section class="user-plan">
+        <div class="user-plan__item flex box box--black-background">
+          <div>
+            <label>Your Account</label>
+            <h4>user_email</h4>
+          </div>
+          <img class="box" src="assets/icons/user-icon.svg" alt="User" />
+        </div>
+        <div class="user-plan__item flex box box--black-background">
+          <div>
+            <label>Your Power</label>
+            <h4>240 <span>GH/s</span></h4>
+          </div>
+          <img class="box" src="assets/icons/shield-icon.svg" alt="Shield" />
+        </div>
+        <div class="user-plan__item flex box box--black-background">
+          <div>
+            <label>Your Plan</label>
+            <h4>Free 2%</h4>
+          </div>
+          <img class="box" src="assets/icons/lock-icon.svg" alt="Lock" />
+        </div>
+        <div class="user-plan__item flex box box--black-background">
+          <div>
+            <label>Unused Power</label>
+            <h4>40 <span>GH/s</span></h4>
+          </div>
+          <img
+            class="box"
+            src="assets/icons/shield-icon-2.svg"
+            alt="Shield-2"
+          />
+        </div>
+      </section>
+
+      <section class="coins-illustration">
+        <div class="coins-illustration__item box box--black-background">
+          <div class="coins-illustration__top flex">
+            <div class="flex">
+              <img src="assets/img/BTC-Logo.svg" alt="BTC" />
+              <div class="coins-illustration__top-info">
+                <p>Bitcoin</p>
+                <span>50 GH/s</span>
+              </div>
+            </div>
+            <span class="coins-illustration__top-crypto-symbol">BTC</span>
+          </div>
+          <span class="coins-illustration__range" id="btcRange">10</span>
+          <div class="coins-illustration__graph flex">
+            <img src="assets/img/BTC-Graph.svg" alt="BTC Graph" />
+            <p>+2.00% Daily</p>
+          </div>
+          <input
+            type="range"
+            value="10"
+            step="5"
+            oninput="btcRange.innerText = this.value"
+          />
+          <div class="flex">
+            <button class="btn btn--blue">Reinvest</button>
+            <button class="btn">Withdraw</button>
+          </div>
+        </div>
+
+        <div class="coins-illustration__item box box--black-background">
+          <div class="coins-illustration__top flex">
+            <div class="flex">
+              <img src="assets/img/ETH-Logo.svg" alt="ETH" />
+              <div class="coins-illustration__top-info">
+                <p>Ethereum</p>
+                <span>50 GH/s</span>
+              </div>
+            </div>
+            <span class="coins-illustration__top-crypto-symbol">ETH</span>
+          </div>
+          <span class="coins-illustration__range" id="ethRange">10</span>
+          <div class="coins-illustration__graph flex">
+            <img src="assets/img/ETH-Graph.svg" alt="ETH Graph" />
+            <p>+2.00% Daily</p>
+          </div>
+          <input
+            type="range"
+            value="10"
+            step="5"
+            oninput="ethRange.innerText = this.value"
+          />
+          <div class="flex">
+            <button class="btn btn--blue">Reinvest</button>
+            <button class="btn">Withdraw</button>
+          </div>
+        </div>
+
+        <div class="coins-illustration__item box box--black-background">
+          <div class="coins-illustration__top flex">
+            <div class="flex">
+              <img src="assets/img/BNB-Logo.svg" alt="BNB" />
+              <div class="coins-illustration__top-info">
+                <p>Binance Coin</p>
+                <span>50 GH/s</span>
+              </div>
+            </div>
+            <span class="coins-illustration__top-crypto-symbol">BNB</span>
+          </div>
+          <span class="coins-illustration__range" id="bnbRange">10</span>
+          <div class="coins-illustration__graph flex">
+            <img src="assets/img/BNB-Graph.svg" alt="BNB Graph" />
+            <p>+2.00% Daily</p>
+          </div>
+          <input
+            type="range"
+            value="10"
+            step="5"
+            oninput="bnbRange.innerText = this.value"
+          />
+          <div class="flex">
+            <button class="btn btn--blue">Reinvest</button>
+            <button class="btn">Withdraw</button>
+          </div>
+        </div>
+
+        <div class="coins-illustration__item box box--black-background">
+          <div class="coins-illustration__top flex">
+            <div class="flex">
+              <img src="assets/img/XRP-Logo.svg" alt="XRP" />
+              <div class="coins-illustration__top-info">
+                <p>Ripple</p>
+                <span>50 GH/s</span>
+              </div>
+            </div>
+            <span class="coins-illustration__top-crypto-symbol">XRP</span>
+          </div>
+          <span class="coins-illustration__range" id="xrpRange">10</span>
+          <div class="coins-illustration__graph flex">
+            <img src="assets/img/XRP-Graph.svg" alt="XRP Graph" />
+            <p>+2.00% Daily</p>
+          </div>
+          <input
+            type="range"
+            value="10"
+            step="5"
+            oninput="xrpRange.innerText = this.value"
+          />
+          <div class="flex">
+            <button class="btn btn--blue">Reinvest</button>
+            <button class="btn">Withdraw</button>
+          </div>
+        </div>
+
+        <div class="coins-illustration__item box box--black-background">
+          <div class="coins-illustration__top flex">
+            <div class="flex">
+              <img src="assets/img/USDT-Logo.svg" alt="USDT" />
+              <div class="coins-illustration__top-info">
+                <p>Tether &#40;TRC-20&#41;</p>
+                <span>50 GH/s</span>
+              </div>
+            </div>
+            <span class="coins-illustration__top-crypto-symbol">USDT</span>
+          </div>
+          <span class="coins-illustration__range" id="usdtRange">10</span>
+          <div class="coins-illustration__graph flex">
+            <img src="assets/img/USDT-Graph.svg" alt="USDT Graph" />
+            <p>+2.00% Daily</p>
+          </div>
+          <input
+            type="range"
+            value="10"
+            step="5"
+            oninput="usdtRange.innerText = this.value"
+          />
+          <div class="flex">
+            <button class="btn btn--blue">Reinvest</button>
+            <button class="btn">Withdraw</button>
+          </div>
+        </div>
+
+        <div class="coins-illustration__item box box--black-background">
+          <div class="coins-illustration__top flex">
+            <div class="flex">
+              <img src="assets/img/TRX-Logo.svg" alt="TRX" />
+              <div class="coins-illustration__top-info">
+                <p>Tron</p>
+                <span>50 GH/s</span>
+              </div>
+            </div>
+            <span class="coins-illustration__top-crypto-symbol">TRX</span>
+          </div>
+          <span class="coins-illustration__range" id="trxRange">10</span>
+          <div class="coins-illustration__graph flex">
+            <img src="assets/img/TRX-Graph.svg" alt="TRX Graph" />
+            <p>+2.00% Daily</p>
+          </div>
+          <input
+            type="range"
+            value="10"
+            step="5"
+            oninput="trxRange.innerText = this.value"
+          />
+          <div class="flex">
+            <button class="btn btn--blue">Reinvest</button>
+            <button class="btn">Withdraw</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="transactions transactions--no-padding mobile-section">
+        <h3 class="transactions__title">Recent Withdrawals</h3>
+
+        <ul class="transactions__list box nowrap">
+          <li>
+            <img src="assets/img/BTC-Logo.svg" alt="Logo" />
+            <div class="transactions__data flex">
+              <p>Amount: <span>0.000000000</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
+
+              <p>
+                TXID:
+                <span>00000000000000000000000000000000000</span>
+              </p>
+            </div>
+
+            <p class="transactions__type withdrawal">Withdrawal</p>
+          </li>
+
+          <li>
+            <img src="assets/img/ETH-Logo.svg" alt="Logo" />
+            <div class="transactions__data flex">
+              <p>Amount: <span>0.000000000</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
+
+              <p>
+                TXID:
+                <span>00000000000000000000000000000000000</span>
+              </p>
+            </div>
+
+            <p class="transactions__type withdrawal">Withdrawal</p>
+          </li>
+
+          <li>
+            <img src="assets/img/BNB-Logo.svg" alt="Logo" />
+            <div class="transactions__data flex">
+              <p>Amount: <span>0.000000000</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
+
+              <p>
+                TXID:
+                <span>00000000000000000000000000000000000</span>
+              </p>
+            </div>
+
+            <p class="transactions__type withdrawal">Withdrawal</p>
+          </li>
+
+          <li>
+            <img src="assets/img/USDT-Logo.svg" alt="Logo" />
+            <div class="transactions__data flex">
+              <p>Amount: <span>0.000000000</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
+
+              <p>
+                TXID:
+                <span>00000000000000000000000000000000000</span>
+              </p>
+            </div>
+
+            <p class="transactions__type withdrawal">Withdrawal</p>
+          </li>
+
+          <li>
+            <img src="assets/img/TRX-Logo.svg" alt="Logo" />
+            <div class="transactions__data flex">
+              <p>Amount: <span>0.000000000</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
+
+              <p>
+                TXID:
+                <span>00000000000000000000000000000000000</span>
+              </p>
+            </div>
+
+            <p class="transactions__type withdrawal">Withdrawal</p>
+          </li>
+
+          <li>
+            <img src="assets/img/XRP-Logo.svg" alt="Logo" />
+            <div class="transactions__data flex">
+              <p>Amount: <span>0.000000000</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
+
+              <p>
+                TXID:
+                <span>00000000000000000000000000000000000</span>
+              </p>
+            </div>
+            <p class="transactions__type withdrawal">Withdrawal</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer flex">
+      <div class="flex">
+        <a class="footer__title" href="index.html">CRYPTON.CC</a>
+        <a class="footer__terms" href="#">Terms of use</a>
+      </div>
+      <p>
+        &copy; 2023 Crypton.cc Cloud Mining. <span>All rights reserved.</span>
+      </p>
+    </footer>
+  </body>
+</html>

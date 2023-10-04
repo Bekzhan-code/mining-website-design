@@ -1,0 +1,82 @@
+@import "../variables";
+
+.coins-illustration {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  &__item {
+    padding: 24px 22px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    max-width: 416px;
+
+    button {
+      width: 48%;
+    }
+
+    input {
+      appearance: none;
+      cursor: pointer;
+      border-radius: 100px;
+      background: linear-gradient(90deg, $blue 10%, #2c2c2c 10%);
+      height: 9px;
+
+      &::-webkit-slider-thumb {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: $blue;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__top {
+    img {
+      width: 55px;
+      height: auto;
+      margin-right: 16px;
+    }
+
+    &-info {
+      p {
+        font-size: 24px;
+      }
+
+      span {
+        font-weight: 700;
+        font-size: 25px;
+      }
+    }
+
+    &-crypto-symbol {
+      align-self: start;
+      font-size: 400;
+      color: $gray;
+    }
+  }
+
+  &__range {
+    font-family: "Source Code Pro";
+    font-size: 36px;
+    font-weight: 600;
+    width: 100%;
+  }
+
+  &__graph {
+    padding-bottom: 24px;
+    img {
+      width: 246px;
+      height: 60px;
+    }
+
+    p {
+      font-weight: 800;
+      color: $green;
+    }
+
+    border-bottom: 1px dashed $gray;
+  }
+}

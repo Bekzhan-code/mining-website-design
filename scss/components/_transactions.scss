@@ -20,25 +20,31 @@
     li {
       display: flex;
       align-items: center;
-      column-gap: 7px;
       min-width: 1288px;
+      column-gap: 20px;
       img {
         min-width: 40px;
+        // margin-right: 20px;
       }
     }
   }
 
   &__data {
     font-family: "Source Code Pro";
-    min-width: 1107px; //act
-    // width: 90%;
+    column-gap: 48px;
 
     p {
       font-weight: 400;
+      font-size: 20px;
 
       span {
         font-weight: 600;
+        font-size: 20px;
       }
+    }
+
+    &--small {
+      column-gap: 24px;
     }
   }
 
@@ -47,10 +53,15 @@
     color: $green;
     min-width: 118px;
     text-align: end;
+    font-size: 20px;
 
     &.withdrawal {
       color: $orange;
     }
+  }
+
+  &--no-padding {
+    padding: 0;
   }
 }
 

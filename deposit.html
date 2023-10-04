@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="js/main.js" defer></script>
+    <script src="js/calculator.js" defer></script>
+    <title>Deposit</title>
+  </head>
+  <body class="container">
+    <header class="header flex">
+      <a class="header__title" href="index.html">CRYPTON.CC</a>
+
+      <nav class="header__nav">
+        <ul class="flex">
+          <li>
+            <a class="header__nav-item page-top" href="index.html">Home</a>
+          </li>
+          <li>
+            <a class="header__nav-item" href="dashboard.html">Dashboard</a>
+          </li>
+          <li>
+            <a class="header__nav-item" href="deposit.html">Deposit</a>
+          </li>
+          <li>
+            <a class="header__nav-item" href="affiliate.html">Affiliate</a>
+          </li>
+          <li>
+            <a class="header__nav-item" href="bonuses.html">Bonuses</a>
+          </li>
+          <li>
+            <a class="header__nav-item" href="bounty.html">Bounty</a>
+          </li>
+          <li><a class="header__nav-item" href="support.html">Contacts</a></li>
+          <li><a class="header__nav-item" href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="header__authentication-btns">
+        <button class="btn btn--blue btn--header">Logout</button>
+      </div>
+      <div class="header__burger"><span></span></div>
+    </header>
+
+    <main class="user-page">
+      <section class="email-verification flex">
+        <p>Please, verify email to get fill access to Crypton.cc</p>
+        <a href="#">Send verification link</a>
+      </section>
+
+      <section
+        class="calculator calculator--no-padding mobile-section calculator-link"
+        id="calculator-link"
+      >
+        <div class="calculator__text">
+          <h3 class="calculator__title">Make a new deposit</h3>
+        </div>
+
+        <div class="calculator__info">
+          <div class="calculator__info-power box--exclude-radius">
+            <h4 class="calculator__info-power-title">Buy GH/s power</h4>
+            <div class="calculator__info-power-content">
+              <div class="calculator__info-power-content-body">
+                <div class="calculator__info-power-content-body-item">
+                  <label>Select coins:</label>
+                  <div
+                    class="calculator__info-power-selected-coin box calculator__input-item--smaller-padding flex"
+                  >
+                    <div class="flex" style="height: 40px">
+                      <img src="assets/img/TRX-Logo.svg" alt="TRX" />
+                      <p>Tron &#40;TRC-20&#41;</p>
+                    </div>
+
+                    <img
+                      src="assets/icons/caret-down-white.svg"
+                      alt="Caret down white"
+                    />
+                  </div>
+
+                  <ul
+                    class="calculator__info-power-coins-wrapper box calculator__input-item--smaller-padding"
+                  >
+                    <li
+                      class="calculator__info-power-coin selected"
+                      id="trx"
+                      value="10"
+                    >
+                      <img src="assets/img/TRX-Logo.svg" alt="TRX" />
+                      <p>Tron &#40;TRC-20&#41;</p>
+                    </li>
+                    <li class="calculator__info-power-coin" id="bnb" value="20">
+                      <img src="assets/img/BNB-Logo.svg" alt="BNB" />
+                      <p>BNB &#40;BEP-20&#41;</p>
+                    </li>
+                    <li
+                      class="calculator__info-power-coin"
+                      id="usdt"
+                      value="30"
+                    >
+                      <img src="assets/img/USDT-Logo.svg" alt="USDT" />
+                      <p>Tether &#40;TRC-20&#41;</p>
+                    </li>
+                    <li class="calculator__info-power-coin" id="btc" value="40">
+                      <img src="assets/img/BTC-Logo.svg" alt="BTC" />
+                      <p>Bitcoin &#40;BTC&#41;</p>
+                    </li>
+                    <li class="calculator__info-power-coin" id="eth" value="50">
+                      <img src="assets/img/ETH-Logo.svg" alt="ETH" />
+                      <p>Ethereum &#40;ETH&#41;</p>
+                    </li>
+                    <li class="calculator__info-power-coin" id="xrp" value="60">
+                      <img src="assets/img/XRP-Logo.svg" alt="XRP" />
+                      <p>Ripple &#40;XRP&#41;</p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="calculator__info-power-content-body-item">
+                  <label>Amount deposit in coin:</label>
+                  <input
+                    class="box calculator__input-item"
+                    type="number"
+                    id="input_coins"
+                  />
+                </div>
+
+                <div class="calculator__info-power-content-body-item">
+                  <label>Amount deposit in USD:</label>
+                  <input
+                    class="box calculator__input-item"
+                    type="number"
+                    id="input_usd"
+                    value="25"
+                  />
+                </div>
+              </div>
+
+              <div class="calculator__info-power-content-bottom">
+                <label>Your plan:</label>
+                <div>
+                  <img src="assets/icons/lock-icon.svg" alt="Lock" />
+                  <span>Special <span id="result_plan">4</span>% per day</span>
+                </div>
+
+                <label>Your power:</label>
+                <div>
+                  <img src="assets/icons/shield-icon.svg" alt="Shield" />
+                  <span><span id="result_ghs">5000</span> GH/s</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="calculator__info-profit box--exclude-radius">
+            <h4 class="calculator__info-profit-title">Your estimate profit</h4>
+            <div class="calculator__info-profit-content">
+              <div class="calculator__info-profit-content-body">
+                <div class="calculator__info-profit-content-body-item">
+                  <label>Select time amount:</label>
+                  <div
+                    class="calculator__info-profit-selected-day box calculator__input-item flex"
+                  >
+                    <p>Per 30 days</p>
+                    <img
+                      src="assets/icons/caret-down-white.svg"
+                      alt="Caret down white"
+                    />
+                  </div>
+
+                  <ul
+                    class="calculator__info-profit-days-wrapper box calculator__input-item"
+                  >
+                    <li
+                      class="calculator__info-profit-day calculator__time-amount"
+                    >
+                      <p>Per 1 day</p>
+                    </li>
+                    <li
+                      class="calculator__info-profit-day calculator__time-amount"
+                    >
+                      <p>Per 10 days</p>
+                    </li>
+                    <li
+                      class="calculator__info-profit-day calculator__time-amount selected"
+                    >
+                      <p>Per 30 days</p>
+                    </li>
+                    <li
+                      class="calculator__info-profit-day calculator__time-amount"
+                    >
+                      <p>Per 180 days</p>
+                    </li>
+                    <li
+                      class="calculator__info-profit-day calculator__time-amount"
+                    >
+                      <p>Per 365 days</p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="calculator__info-profit-content-body-item">
+                  <label>Earning profit:</label>
+                  <div
+                    class="flex box calculator__input-item--smaller-padding"
+                    style="margin-bottom: 12px"
+                  >
+                    <span class="calculator__info-profit-crypto-amount"
+                      >25 300.34</span
+                    >
+                    <div class="calculator__info-profit-selected-coin flex">
+                      <p>TRON &#40;TRC-20&#41;</p>
+                      <img src="assets/img/TRX-Logo.svg" alt="TRX" />
+                    </div>
+                  </div>
+
+                  <div class="flex box calculator__input-item--smaller-padding">
+                    <span
+                      class="calculator__info-profit-usd-amount"
+                      id="result_profit"
+                      >1 600.00</span
+                    >
+                    <div class="flex">
+                      <p>USD</p>
+                      <img
+                        src="assets/img/USD-Logo.svg"
+                        alt="USD"
+                        style="margin-left: 12px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn btn--blue">Buy now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="transactions transactions--no-padding mobile-section">
+        <h3 class="transactions__title">Recent deposits</h3>
+
+        <ul class="transactions__list box nowrap">
+          <li>
+            <img src="assets/img/BTC-Logo.svg" alt="Logo" />
+            <div class="transactions__data transactions__data--small flex">
+              <p>Amount: <span>0.000000000 USD</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
+
+              <p>Expires: <span>1971-00-00 00:00</span></p>
+              <p>Power: <span>240 GH/s</span></p>
+            </div>
+
+            <p class="transactions__type">Active</p>
+          </li>
+
+          <li>
+            <img src="assets/img/ETH-Logo.svg" alt="Logo" />
+            <div class="transactions__data transactions__data--small flex">
+              <p>Amount: <span>0.000000000 USD</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
+
+              <p>Expires: <span>1971-00-00 00:00</span></p>
+              <p>Power: <span>240 GH/s</span></p>
+            </div>
+
+            <p class="transactions__type">Active</p>
+          </li>
+
+          <li>
+            <img src="assets/img/BNB-Logo.svg" alt="Logo" />
+            <div class="transactions__data transactions__data--small flex">
+              <p>Amount: <span>0.000000000 USD</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
+
+              <p>Expires: <span>1971-00-00 00:00</span></p>
+              <p>Power: <span>240 GH/s</span></p>
+            </div>
+
+            <p class="transactions__type">Active</p>
+          </li>
+
+          <li>
+            <img src="assets/img/USDT-Logo.svg" alt="Logo" />
+            <div class="transactions__data transactions__data--small flex">
+              <p>Amount: <span>0.000000000 USD</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
+
+              <p>Expires: <span>1971-00-00 00:00</span></p>
+              <p>Power: <span>240 GH/s</span></p>
+            </div>
+
+            <p class="transactions__type">Active</p>
+          </li>
+
+          <li>
+            <img src="assets/img/TRX-Logo.svg" alt="Logo" />
+            <div class="transactions__data transactions__data--small flex">
+              <p>Amount: <span>0.000000000 USD</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
+
+              <p>Expires: <span>1971-00-00 00:00</span></p>
+              <p>Power: <span>240 GH/s</span></p>
+            </div>
+
+            <p class="transactions__type">Active</p>
+          </li>
+
+          <li>
+            <img src="assets/img/XRP-Logo.svg" alt="Logo" />
+            <div class="transactions__data transactions__data--small flex">
+              <p>Amount: <span>0.000000000 USD</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
+
+              <p>Expires: <span>1971-00-00 00:00</span></p>
+              <p>Power: <span>240 GH/s</span></p>
+            </div>
+            <p class="transactions__type">Active</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer flex">
+      <div class="flex">
+        <a class="footer__title" href="index.html">CRYPTON.CC</a>
+        <a class="footer__terms" href="#">Terms of use</a>
+      </div>
+      <p>
+        &copy; 2023 Crypton.cc Cloud Mining. <span>All rights reserved.</span>
+      </p>
+    </footer>
+  </body>
+</html>

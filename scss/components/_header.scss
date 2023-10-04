@@ -50,6 +50,10 @@
     overflow: hidden;
   }
   .header {
+    padding: 12.5px 26px;
+    width: 100vw;
+    left: 0;
+
     &__burger {
       display: block;
       width: 24px;
@@ -146,8 +150,8 @@
 }
 
 @media (max-width: 480px) {
-  .header {
-    padding: 12.5px 0;
-    width: 90vw;
-  }
+  // .header {
+  //   padding: 12.5px 0;
+  //   width: 95vw;
+  // }
 }

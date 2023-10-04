@@ -3,11 +3,15 @@ const headerBurger = document.querySelector(".header__burger");
 const headerNav = document.querySelector(".header__nav");
 const headerAuthBtns = document.querySelector(".header__authentication-btns");
 
-headerBurger.addEventListener("click", () => {
+const toggleHeaderNav = () => {
   headerBurger.classList.toggle("active");
   headerNav.classList.toggle("active");
   headerAuthBtns.classList.toggle("active");
   document.body.classList.toggle("lock");
+};
+
+headerBurger.addEventListener("click", () => {
+  toggleHeaderNav();
 });
 
 // HEADER NAVIGATION
@@ -17,6 +21,10 @@ const windowPath = window.location.href;
 
 // Добавляет класс 'active' для нажатой ссылки
 navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    toggleHeaderNav();
+  });
+
   const linkPath = link.href;
 
   if (windowPath[windowPath.length - 1] === "/") {
@@ -51,7 +59,7 @@ if (sections[0].classList.contains("page-top")) {
   };
 }
 
-// FAQ question expanding
+// FAQ QUESTION EXPANDING
 const questions = document.querySelectorAll(".faq__item");
 
 questions.forEach((q) => {
@@ -60,104 +68,18 @@ questions.forEach((q) => {
   });
 });
 
-// Calculator options selecting
-const selectedCoin = document.querySelector(
-  ".calculator__info-power-selected-coin"
-);
-const selectedCoinProfit = document.querySelector(
-  ".calculator__info-profit-selected-coin"
-);
-const coinsWrapper = document.querySelector(
-  ".calculator__info-power-coins-wrapper"
-);
-const coinsList = document.querySelectorAll(".calculator__info-power-coin");
+// SLIDER
+const sliders = document.querySelector(".coins-illustration__item input");
 
-const selectedDay = document.querySelector(
-  ".calculator__info-profit-selected-day"
-);
-const daysWrapper = document.querySelector(
-  ".calculator__info-profit-days-wrapper"
-);
-const daysList = document.querySelectorAll(".calculator__info-profit-day");
+sliders.forEach((slider) => {
+  slider.addEventListener("mousemove", () => {
+    const percentage = slider.value;
+    const color = `linear-gradient(90deg, $blue ${percentage}%, #2c2c2c ${percentage}%)`;
 
-const changeOption = (selectedElArr, regexArr, selectedItem, wrapper) => {
-  selectedElArr.forEach((selectedEl) => {
-    regexArr.forEach((regex) => {
-      selectedEl.innerHTML = selectedEl.innerHTML.replace(
-        regex,
-        selectedItem.innerHTML.match(regex)[0]
-      );
-    });
+    // console.log(color);
+
+    slider.style.background = color;
+
+    // console.log(slider.style);
   });
-
-  selectedItem.classList.add("selected");
-  wrapper.classList.toggle("active");
-};
-
-selectedCoin.addEventListener("click", () => {
-  coinsWrapper.classList.toggle("active");
-});
-
-coinsList.forEach((coin, index) => {
-  coin.addEventListener("click", () => {
-    const imgRegex = /<img.*?>/;
-    const pRegex = /<p>.*?<\/p>/;
-
-    changeOption(
-      [selectedCoin, selectedCoinProfit],
-      [imgRegex, pRegex],
-      coin,
-      coinsWrapper
-    );
-
-    changeCoin(coin.id);
-
-    coinsList.forEach((c, i) => {
-      if (i !== index) c.classList.remove("selected");
-    });
-  });
-});
-
-selectedDay.addEventListener("click", () => {
-  daysWrapper.classList.toggle("active");
-});
-
-daysList.forEach((day, index) => {
-  day.addEventListener("click", () => {
-    const pRegex = /<p>.*?<\/p>/;
-    changeOption([selectedDay], [pRegex], day, daysWrapper);
-
-    setPeriod(Number(day.innerText.replace(/\D/g, "")));
-
-    daysList.forEach((d, i) => {
-      if (i != index) d.classList.remove("selected");
-    });
-  });
-});
-
-// PASSWORD INPUT
-const togglePasswordImg = document.querySelector("#toggle-password-img");
-const passwordInput = document.querySelector("#password-input");
-
-const togglePasswordConfirmImg = document.querySelector(
-  "#toggle-confirm-password-img"
-);
-const passwordConfirmInput = document.querySelector("#password-confirm-input");
-
-const togglePassword = (pasInput, pasImg) => {
-  const type =
-    pasInput.getAttribute("type") === "password" ? "text" : "password";
-  pasInput.setAttribute("type", type);
-
-  pasImg.src = pasImg.src.includes("close")
-    ? pasImg.src.replace("close", "open")
-    : pasImg.src.replace("open", "close");
-};
-
-togglePasswordImg.addEventListener("click", () => {
-  togglePassword(passwordInput, togglePasswordImg);
-});
-
-togglePasswordConfirmImg.addEventListener("click", () => {
-  togglePassword(passwordConfirmInput, togglePasswordConfirmImg);
 });

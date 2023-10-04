@@ -1,3 +1,79 @@
+// Calculator options selecting
+const selectedCoin = document.querySelector(
+  ".calculator__info-power-selected-coin"
+);
+const selectedCoinProfit = document.querySelector(
+  ".calculator__info-profit-selected-coin"
+);
+const coinsWrapper = document.querySelector(
+  ".calculator__info-power-coins-wrapper"
+);
+const coinsList = document.querySelectorAll(".calculator__info-power-coin");
+
+const selectedDay = document.querySelector(
+  ".calculator__info-profit-selected-day"
+);
+const daysWrapper = document.querySelector(
+  ".calculator__info-profit-days-wrapper"
+);
+const daysList = document.querySelectorAll(".calculator__info-profit-day");
+
+const changeOption = (selectedElArr, regexArr, selectedItem, wrapper) => {
+  selectedElArr.forEach((selectedEl) => {
+    regexArr.forEach((regex) => {
+      selectedEl.innerHTML = selectedEl.innerHTML.replace(
+        regex,
+        selectedItem.innerHTML.match(regex)[0]
+      );
+    });
+  });
+
+  selectedItem.classList.add("selected");
+  wrapper.classList.toggle("active");
+};
+
+selectedCoin.addEventListener("click", () => {
+  coinsWrapper.classList.toggle("active");
+});
+
+coinsList.forEach((coin, index) => {
+  coin.addEventListener("click", () => {
+    const imgRegex = /<img.*?>/;
+    const pRegex = /<p>.*?<\/p>/;
+
+    changeOption(
+      [selectedCoin, selectedCoinProfit],
+      [imgRegex, pRegex],
+      coin,
+      coinsWrapper
+    );
+
+    changeCoin(coin.id);
+
+    coinsList.forEach((c, i) => {
+      if (i !== index) c.classList.remove("selected");
+    });
+  });
+});
+
+selectedDay.addEventListener("click", () => {
+  daysWrapper.classList.toggle("active");
+});
+
+daysList.forEach((day, index) => {
+  day.addEventListener("click", () => {
+    const pRegex = /<p>.*?<\/p>/;
+    changeOption([selectedDay], [pRegex], day, daysWrapper);
+
+    setPeriod(Number(day.innerText.replace(/\D/g, "")));
+
+    daysList.forEach((d, i) => {
+      if (i != index) d.classList.remove("selected");
+    });
+  });
+});
+
+// CALCULATION
 function numberFormat(number, decimals, dec_point, thousands_sep) {
   // Format a number with grouped thousands
   var i, j, kw, kd, km;
@@ -141,32 +217,6 @@ input_usd.addEventListener("input", () => {
 
   input_active = "input_usd";
 });
-
-// let period_days = Number(
-//   document.querySelector(".calculator__info-profit-selected-day").innerText
-// );
-// let coin_selected = document
-//   .querySelector(".calculator__info-power-coin")
-//   .contains("selected").id;
-
-// selectedCoin.addEventListener("click", () => {
-//   coinsList.forEach((coin) => {
-//     coin_selected = coin.classList.contains("selected").id;
-//     console.log(coin_selected);
-//   });
-
-// //   fake_input();
-// });
-
-// document
-//   .querySelector(".calculator__info-profit-selected-day")
-//   .addEventListener("click", () => {
-//     period_days = Number(
-//       document.querySelector(".calculator__info-profit-selected-day")
-//     ).innerText;
-//     console.log(period_days);
-//     // fake_input();
-//   });
 
 function setPeriod(value) {
   period_days = Number(value);

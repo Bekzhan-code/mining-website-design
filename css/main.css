@@ -161,6 +161,11 @@ img {
   body.lock {
     overflow: hidden;
   }
+  .header {
+    padding: 12.5px 26px;
+    width: 100vw;
+    left: 0;
+  }
   .header__burger {
     display: block;
     width: 24px;
@@ -262,12 +267,6 @@ img {
     right: 160px;
   }
 }
-@media (max-width: 480px) {
-  .header {
-    padding: 12.5px 0;
-    width: 90vw;
-  }
-}
 .btn {
   padding: 12px 20px;
   font-weight: 600;
@@ -296,6 +295,7 @@ img {
 
 .hero {
   text-align: center;
+  padding-top: 60px;
 }
 .hero__top {
   display: -webkit-box;
@@ -325,7 +325,6 @@ img {
 }
 .hero__title {
   margin-bottom: 8px;
-  margin-top: 140px;
 }
 .hero__title span {
   color: #2453cc;
@@ -972,6 +971,9 @@ img {
   color: #42d559;
   font-weight: 600;
 }
+.calculator--no-padding {
+  padding: 0;
+}
 
 @media (max-width: 960px) {
   .calculator__input-item {
@@ -1041,32 +1043,45 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 7px;
-     -moz-column-gap: 7px;
-          column-gap: 7px;
   min-width: 1288px;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
 }
 .transactions__list li img {
   min-width: 40px;
 }
 .transactions__data {
   font-family: "Source Code Pro";
-  min-width: 1107px;
+  -webkit-column-gap: 48px;
+     -moz-column-gap: 48px;
+          column-gap: 48px;
 }
 .transactions__data p {
   font-weight: 400;
+  font-size: 20px;
 }
 .transactions__data p span {
   font-weight: 600;
+  font-size: 20px;
+}
+.transactions__data--small {
+  -webkit-column-gap: 24px;
+     -moz-column-gap: 24px;
+          column-gap: 24px;
 }
 .transactions__type {
   font-weight: 700;
   color: #42d559;
   min-width: 118px;
   text-align: end;
+  font-size: 20px;
 }
 .transactions__type.withdrawal {
   color: #f0ab43;
+}
+.transactions--no-padding {
+  padding: 0;
 }
 
 @media (max-width: 480px) {
@@ -1093,6 +1108,9 @@ img {
   font-size: 20px;
   font-weight: 900;
   margin-right: 24px;
+}
+.footer--support {
+  margin-top: 269px;
 }
 
 @media (max-width: 960px) {
@@ -1293,6 +1311,114 @@ img {
   color: #6f6f6f;
 }
 
+.email-verification {
+  padding: 16px 24px;
+  background-color: #5b5b5b;
+  border-radius: 12px;
+}
+.email-verification p {
+  color: #fff;
+}
+.email-verification a {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.user-plan {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.user-plan__item {
+  padding: 20px 24px;
+}
+.user-plan__item label {
+  color: #6f6f6f;
+}
+.user-plan__item span {
+  font-weight: 400;
+}
+.user-plan__item img {
+  width: 60px;
+  height: auto;
+  padding: 12px;
+}
+
+.coins-illustration {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.coins-illustration__item {
+  padding: 24px 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 24px;
+  max-width: 416px;
+}
+.coins-illustration__item button {
+  width: 48%;
+}
+.coins-illustration__item input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  border-radius: 100px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, #2453cc), color-stop(10%, #2c2c2c));
+  background: linear-gradient(90deg, #2453cc 10%, #2c2c2c 10%);
+  height: 9px;
+}
+.coins-illustration__item input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #2453cc;
+  border-radius: 50%;
+}
+.coins-illustration__top img {
+  width: 55px;
+  height: auto;
+  margin-right: 16px;
+}
+.coins-illustration__top-info p {
+  font-size: 24px;
+}
+.coins-illustration__top-info span {
+  font-weight: 700;
+  font-size: 25px;
+}
+.coins-illustration__top-crypto-symbol {
+  -ms-flex-item-align: start;
+      align-self: start;
+  font-size: 400;
+  color: #6f6f6f;
+}
+.coins-illustration__range {
+  font-family: "Source Code Pro";
+  font-size: 36px;
+  font-weight: 600;
+  width: 100%;
+}
+.coins-illustration__graph {
+  padding-bottom: 24px;
+  border-bottom: 1px dashed #6f6f6f;
+}
+.coins-illustration__graph img {
+  width: 246px;
+  height: 60px;
+}
+.coins-illustration__graph p {
+  font-weight: 800;
+  color: #42d559;
+}
+
 /* || UTILITY CLASSES */
 .flex {
   display: -webkit-box;
@@ -1318,8 +1444,11 @@ img {
 .box--bigger-radius {
   border-radius: 20px;
 }
-.box--black-background {
+.box--input-background {
   background-color: #151515;
+}
+.box--black-background {
+  background-color: #212121;
 }
 
 .nowrap {
@@ -1333,6 +1462,7 @@ img {
 /* || MAIN CLASSES */
 body {
   background-image: url("../assets/img/Waves-bg-1.svg");
+  background-size: contain;
 }
 body.main {
   background-image: url("../assets/img/Waves-bg-1.svg"), url("../assets/img/Waves-bg-2.svg"), url("../assets/img/Waves-bg-3.svg");
@@ -1363,11 +1493,19 @@ body.about {
 main {
   margin-top: 80px;
 }
+main.user-page {
+  margin: 116px 0 36px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 36px;
+}
 
 @media (max-width: 480px) {
-  body {
-    background-image: none !important;
-  }
   main {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -1377,6 +1515,9 @@ main {
         -ms-flex-direction: column;
             flex-direction: column;
     row-gap: 16px;
+  }
+  main section:first-child {
+    padding-top: 0;
   }
   .mobile-section {
     padding: 24px 0;

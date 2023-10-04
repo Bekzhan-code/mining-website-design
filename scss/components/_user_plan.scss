@@ -1,0 +1,25 @@
+@import "../variables";
+
+.user-plan {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+
+  &__item {
+    padding: 20px 24px;
+
+    label {
+      color: $gray;
+    }
+
+    span {
+      font-weight: 400;
+    }
+
+    img {
+      width: 60px;
+      height: auto;
+      padding: 12px;
+    }
+  }
+}
