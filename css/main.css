@@ -1667,7 +1667,7 @@ img {
 /* || MAIN CLASSES */
 body {
   background-image: url("../assets/img/Waves-bg-1.svg");
-  background-size: contain;
+  background-position: top center;
 }
 body.main {
   background-image: url("../assets/img/Waves-bg-1.svg"), url("../assets/img/Waves-bg-2.svg"), url("../assets/img/Waves-bg-3.svg");
