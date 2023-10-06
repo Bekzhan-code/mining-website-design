@@ -1,0 +1,74 @@
+@import "../variables";
+
+.bonus-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  gap: 24px;
+  &__item {
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    width: clamp(250px, 100%, 636px);
+
+    p {
+      font-size: 20px;
+    }
+
+    input {
+      height: 48px;
+    }
+
+    button {
+      img {
+        margin-left: 8px;
+      }
+    }
+
+    span {
+      font-weight: 400;
+      color: $light-gray;
+      font-size: 20px;
+    }
+  }
+
+  &__time {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+  }
+
+  &__item-bottom {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    column-gap: 12px;
+  }
+
+  &--light-text {
+    p {
+      color: $light-gray;
+    }
+  }
+}
+
+@media (max-width: 1510px) {
+  .bonus-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .bonus-cards {
+    &__item-bottom {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+      place-items: center;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+}

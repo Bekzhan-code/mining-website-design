@@ -100,7 +100,7 @@
         p {
           text-align: start;
           font-size: 1em;
-          color: #a5adcf;
+          color: $crypto-name-color;
         }
 
         span {
@@ -112,7 +112,7 @@
         align-self: start;
         font-size: 1em;
         font-weight: 400;
-        color: #5d6588;
+        color: $crypto-short-name-color;
       }
 
       &-bottom {

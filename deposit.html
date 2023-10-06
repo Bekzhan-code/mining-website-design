@@ -17,7 +17,7 @@
       <nav class="header__nav">
         <ul class="flex">
           <li>
-            <a class="header__nav-item page-top" href="index.html">Home</a>
+            <a class="header__nav-item" href="index.html">Home</a>
           </li>
           <li>
             <a class="header__nav-item" href="dashboard.html">Dashboard</a>
@@ -45,9 +45,11 @@
     </header>
 
     <main class="user-page">
-      <section class="email-verification flex">
-        <p>Please, verify email to get fill access to Crypton.cc</p>
-        <a href="#">Send verification link</a>
+      <section class="email-verification">
+        <p>
+          Please, verify email to get fill access to Crypton.cc
+          <a href="#">Send verification link</a>
+        </p>
       </section>
 
       <section
@@ -244,9 +246,35 @@
 
         <ul class="transactions__list box nowrap">
           <li>
+            <img src="assets/img/Gift-Logo.svg" alt="Logo" />
+            <div class="transactions__data transactions__data--small flex">
+              <p>Amount: <span>6.000000000 USD</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
+
+              <p>Expires: <span>1971-00-00 00:00</span></p>
+              <p>Power: <span>240 GH/s</span></p>
+            </div>
+
+            <p class="transactions__type">Active</p>
+          </li>
+
+          <li>
+            <img src="assets/img/Reinvest-Logo.svg" alt="Logo" />
+            <div class="transactions__data transactions__data--small flex">
+              <p>Amount: <span>3.000000000 USD</span></p>
+              <p>Date: <span>1970-00-00 00:00</span></p>
+
+              <p>Expires: <span>1971-00-00 00:00</span></p>
+              <p>Power: <span>240 GH/s</span></p>
+            </div>
+
+            <p class="transactions__type">Active</p>
+          </li>
+
+          <li>
             <img src="assets/img/BTC-Logo.svg" alt="Logo" />
             <div class="transactions__data transactions__data--small flex">
-              <p>Amount: <span>0.000000000 USD</span></p>
+              <p>Amount: <span>6.000000000 USD</span></p>
               <p>Date: <span>1970-00-00 00:00</span></p>
 
               <p>Expires: <span>1971-00-00 00:00</span></p>
@@ -259,7 +287,7 @@
           <li>
             <img src="assets/img/ETH-Logo.svg" alt="Logo" />
             <div class="transactions__data transactions__data--small flex">
-              <p>Amount: <span>0.000000000 USD</span></p>
+              <p>Amount: <span>6.000000000 USD</span></p>
               <p>Date: <span>1970-00-00 00:00</span></p>
 
               <p>Expires: <span>1971-00-00 00:00</span></p>
@@ -272,7 +300,7 @@
           <li>
             <img src="assets/img/BNB-Logo.svg" alt="Logo" />
             <div class="transactions__data transactions__data--small flex">
-              <p>Amount: <span>0.000000000 USD</span></p>
+              <p>Amount: <span>6.000000000 USD</span></p>
               <p>Date: <span>1970-00-00 00:00</span></p>
 
               <p>Expires: <span>1971-00-00 00:00</span></p>
@@ -285,7 +313,7 @@
           <li>
             <img src="assets/img/USDT-Logo.svg" alt="Logo" />
             <div class="transactions__data transactions__data--small flex">
-              <p>Amount: <span>0.000000000 USD</span></p>
+              <p>Amount: <span>6.000000000 USD</span></p>
               <p>Date: <span>1970-00-00 00:00</span></p>
 
               <p>Expires: <span>1971-00-00 00:00</span></p>
@@ -298,7 +326,7 @@
           <li>
             <img src="assets/img/TRX-Logo.svg" alt="Logo" />
             <div class="transactions__data transactions__data--small flex">
-              <p>Amount: <span>0.000000000 USD</span></p>
+              <p>Amount: <span>6.000000000 USD</span></p>
               <p>Date: <span>1970-00-00 00:00</span></p>
 
               <p>Expires: <span>1971-00-00 00:00</span></p>
@@ -311,7 +339,7 @@
           <li>
             <img src="assets/img/XRP-Logo.svg" alt="Logo" />
             <div class="transactions__data transactions__data--small flex">
-              <p>Amount: <span>0.000000000 USD</span></p>
+              <p>Amount: <span>6.000000000 USD</span></p>
               <p>Date: <span>1970-00-00 00:00</span></p>
 
               <p>Expires: <span>1971-00-00 00:00</span></p>
@@ -326,7 +354,7 @@
     <footer class="footer flex">
       <div class="flex">
         <a class="footer__title" href="index.html">CRYPTON.CC</a>
-        <a class="footer__terms" href="#">Terms of use</a>
+        <a class="footer__terms" href="terms.html">Terms of use</a>
       </div>
       <p>
         &copy; 2023 Crypton.cc Cloud Mining. <span>All rights reserved.</span>

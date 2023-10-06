@@ -6,7 +6,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: $white;
+  color: #fff;
 }
 
 :-webkit-any(article, aside, nav, section) {
@@ -106,25 +106,27 @@ img {
 }
 
 @media (max-width: 1280px) {
-  :-webkit-any(article, aside, nav, section) {
+  main:not(.user-page) {
+    :-webkit-any(article, aside, nav, section) {
+      h1,
+      h2 {
+        font-size: 32px;
+      }
+    }
+
     h1,
     h2 {
       font-size: 32px;
     }
-  }
 
-  h1,
-  h2 {
-    font-size: 32px;
-  }
+    h3 {
+      font-size: 24px;
+    }
 
-  h3 {
-    font-size: 24px;
-  }
-
-  h4,
-  h5 {
-    font-size: 16px;
-    font-weight: 400;
+    h4,
+    h5 {
+      font-size: 16px;
+      font-weight: 400;
+    }
   }
 }

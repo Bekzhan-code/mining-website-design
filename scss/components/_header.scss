@@ -37,7 +37,7 @@
           }
 
           &.active {
-            color: $white;
+            color: #fff;
           }
         }
       }
@@ -135,23 +135,17 @@
     &__authentication-btns {
       position: fixed;
       right: -100%;
-      top: 320px;
+      top: 350px;
       display: flex;
       flex-direction: column;
       row-gap: 12px;
       align-self: start;
       transition: $transition;
+      min-width: 92px;
 
       &.active {
         right: 160px;
       }
     }
   }
-}
-
-@media (max-width: 480px) {
-  // .header {
-  //   padding: 12.5px 0;
-  //   width: 95vw;
-  // }
 }

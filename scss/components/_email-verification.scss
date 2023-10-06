@@ -1,16 +1,26 @@
 @import "../variables";
 
 .email-verification {
-  padding: 16px 24px;
+  padding: 16px 24px !important;
   background-color: $email-verification-bg-color;
   border-radius: $border-radius;
 
   p {
     color: #fff;
+    display: flex;
+    justify-content: space-between;
   }
 
   a {
     text-decoration: underline;
     font-weight: 700;
+  }
+}
+
+@media (max-width: 760px) {
+  .email-verification {
+    p {
+      display: block;
+    }
   }
 }
