@@ -14,6 +14,17 @@
     row-gap: 1.5em;
     max-width: 416px;
 
+    &.inactive {
+      p,
+      span {
+        color: $gray;
+      }
+
+      .coins-illustration__graph {
+        filter: grayscale(100%);
+      }
+    }
+
     button {
       width: 48%;
     }
@@ -22,7 +33,7 @@
       appearance: none;
       cursor: pointer;
       border-radius: 100px;
-      background: linear-gradient(90deg, $blue 10%, #2c2c2c 10%);
+      background: #2c2c2c;
       height: 9px;
 
       &::-webkit-slider-thumb {
@@ -44,7 +55,7 @@
 
     &-info {
       p {
-        color: $crypto-name-color;
+        color: $crypto-name-color !important;
         font-size: 1em;
       }
 
@@ -57,7 +68,7 @@
     &-crypto-symbol {
       align-self: start;
       font-size: 400;
-      color: $crypto-short-name-color;
+      color: $crypto-short-name-color !important;
       font-size: 1em;
     }
   }
@@ -80,13 +91,14 @@
       font-weight: 800;
       color: $green;
       font-size: 1em;
+      min-width: 104px;
     }
 
-    border-bottom: 1px dashed $gray;
+    border-bottom: 1px dashed #404047;
   }
 }
 
-@media (max-width: 1510px) {
+@media (max-width: 1440px) {
   .coins-illustration {
     grid-template-columns: 1fr 1fr;
   }
@@ -95,9 +107,6 @@
 @media (max-width: 870px) {
   .coins-illustration {
     grid-template-columns: 1fr;
-    // &__item {
-    //   font-size: 0.7rem;
-    // }
   }
 }
 
@@ -108,19 +117,3 @@
     }
   }
 }
-
-// @media (max-width: 550px) {
-//   .coins-illustration {
-//     &__item {
-//       font-size: 0.5rem;
-//     }
-//   }
-// }
-
-// @media (max-width: 400px) {
-//   .coins-illustration {
-//     &__item {
-//       font-size: 0.42rem;
-//     }
-//   }
-// }

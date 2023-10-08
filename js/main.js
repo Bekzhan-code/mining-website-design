@@ -17,7 +17,17 @@ headerBurger.addEventListener("click", () => {
 // HEADER NAVIGATION
 const navLinks = document.querySelectorAll(".header__nav-item");
 const sections = document.querySelectorAll("section");
+const header = document.querySelector(".header");
 const windowPath = window.location.href;
+
+// Добавляет цвет фона в header при опускании вниз по стр.
+const changeTransparency = () => {
+  if (scrollY !== 0) header.style.backgroundColor = "#090909";
+  else header.style.backgroundColor = "transparent";
+};
+window.onscroll = () => {
+  changeTransparency();
+};
 
 // Добавляет класс 'active' для нажатой ссылки
 navLinks.forEach((link) => {
@@ -39,6 +49,8 @@ navLinks.forEach((link) => {
 
 if (sections[0].classList.contains("page-top")) {
   window.onscroll = () => {
+    changeTransparency();
+
     let current;
 
     sections.forEach((section) => {
@@ -69,17 +81,41 @@ questions.forEach((q) => {
 });
 
 // SLIDER
-const sliders = document.querySelector(".coins-illustration__item input");
+const sliders = document.querySelectorAll(".coins-illustration__item input");
+const coinsIllustrationList = document.querySelectorAll(
+  ".coins-illustration__item"
+);
+const coinsGhs = document.querySelectorAll(
+  ".coins-illustration__top-info span"
+);
+const coinsPercentage = document.querySelectorAll(
+  ".coins-illustration__graph p"
+);
 
-sliders.forEach((slider) => {
-  slider.addEventListener("mousemove", () => {
-    const percentage = slider.value;
-    const color = `linear-gradient(90deg, $blue ${percentage}%, #2c2c2c ${percentage}%)`;
+sliders.forEach((slider, index) => {
+  slider.addEventListener("input", (e) => {
+    if (e.target.value == 0) {
+      coinsIllustrationList[index].classList.add("inactive");
+      coinsPercentage[index].textContent = "0.00% Daily";
+    } else {
+      coinsIllustrationList[index].classList.remove("inactive");
+      coinsPercentage[index].textContent = "+2.00% Daily";
+    }
 
-    // console.log(color);
+    const tempSliderVal = e.target.value;
 
-    slider.style.background = color;
+    const percentage = (tempSliderVal / slider.max) * 100;
 
-    // console.log(slider.style);
+    slider.style.background = `linear-gradient(to right, #2453cc ${percentage}%, #2c2c2c ${percentage}%)`;
   });
 });
+
+// COPY AFFILIATE LINK
+const copyText = document.querySelector(".bonus-cards__item-bottom input");
+const copyBtn = document.querySelector(".bonus-cards__item-bottom button");
+
+if (copyBtn) {
+  copyBtn.addEventListener("click", () => {
+    navigator.clipboard.writeText(copyText.value);
+  });
+}

@@ -2,11 +2,10 @@
 
 .header {
   padding: 20px 16px;
-  width: 85vw;
+  width: 90vw;
   position: fixed;
   top: 0;
   z-index: 10;
-  background-color: $body-background-color;
 
   &__title {
     font-weight: 900;

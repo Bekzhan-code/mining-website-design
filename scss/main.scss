@@ -54,7 +54,7 @@ body {
   &.main {
     background-image: url("../assets/img/Waves-bg-1.svg"),
       url("../assets/img/Waves-bg-2.svg"), url("../assets/img/Waves-bg-3.svg");
-    background-position: top center, bottom left, bottom right;
+    background-position: top center, bottom 17% center, bottom center;
   }
 
   &.about {
@@ -63,7 +63,7 @@ body {
 }
 
 .container {
-  width: 85vw;
+  width: 90vw;
   margin: 0 auto;
 
   &--full-height {

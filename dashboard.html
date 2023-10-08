@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css" />
 
     <script src="js/main.js" defer></script>
+    <script src="js/distribution.js" defer></script>
     <title>Dashboard</title>
   </head>
   <body class="container">
@@ -62,7 +63,7 @@
         <div class="user-plan__item flex box box--black-background">
           <div>
             <label>Your Power</label>
-            <h4>240 <span>GH/s</span></h4>
+            <h4 id="all_power">240<span>&nbsp;GH/s</span></h4>
           </div>
           <img class="box" src="assets/icons/shield-icon.svg" alt="Shield" />
         </div>
@@ -76,7 +77,7 @@
         <div class="user-plan__item flex box box--black-background">
           <div>
             <label>Unused Power</label>
-            <h4>40 <span>GH/s</span></h4>
+            <h4 id="free_power">40<span>&nbsp;GH/s</span></h4>
           </div>
           <img
             class="box"
@@ -87,168 +88,162 @@
       </section>
 
       <section class="coins-illustration nowrap">
-        <div class="coins-illustration__item box box--black-background">
+        <div
+          class="coins-illustration__item inactive box box--black-background"
+        >
           <div class="coins-illustration__top flex">
             <div class="flex">
               <img src="assets/img/BTC-Logo.svg" alt="BTC" />
               <div class="coins-illustration__top-info">
                 <p>Bitcoin</p>
-                <span>50 GH/s</span>
+                <span id="btc_power"
+                  >0<span style="font-size: inherit">&nbsp;GH/s</span></span
+                >
               </div>
             </div>
             <span class="coins-illustration__top-crypto-symbol">BTC</span>
           </div>
-          <span class="coins-illustration__range" id="btcRange">10</span>
+          <span class="coins-illustration__range" id="btc_balance">0</span>
           <div class="coins-illustration__graph flex">
             <img src="assets/img/BTC-Graph.svg" alt="BTC Graph" />
-            <p>+2.00% Daily</p>
+            <p>0.00% Daily</p>
           </div>
-          <input
-            type="range"
-            value="10"
-            step="5"
-            oninput="btcRange.innerText = this.value"
-          />
+          <input type="range" value="0" step="1" min="0" max="240" />
           <div class="flex">
             <button class="btn btn--blue">Reinvest</button>
             <button class="btn">Withdraw</button>
           </div>
         </div>
 
-        <div class="coins-illustration__item box box--black-background">
+        <div
+          class="coins-illustration__item inactive box box--black-background"
+        >
           <div class="coins-illustration__top flex">
             <div class="flex">
               <img src="assets/img/ETH-Logo.svg" alt="ETH" />
               <div class="coins-illustration__top-info">
                 <p>Ethereum</p>
-                <span>50 GH/s</span>
+                <span id="eth-power"
+                  >0<span style="font-size: inherit">&nbsp;GH/s</span></span
+                >
               </div>
             </div>
             <span class="coins-illustration__top-crypto-symbol">ETH</span>
           </div>
-          <span class="coins-illustration__range" id="ethRange">10</span>
+          <span class="coins-illustration__range" id="eth_balance">0</span>
           <div class="coins-illustration__graph flex">
             <img src="assets/img/ETH-Graph.svg" alt="ETH Graph" />
-            <p>+2.00% Daily</p>
+            <p>0.00% Daily</p>
           </div>
-          <input
-            type="range"
-            value="10"
-            step="5"
-            oninput="ethRange.innerText = this.value"
-          />
+          <input type="range" value="0" step="5" min="0" max="240" />
           <div class="flex">
             <button class="btn btn--blue">Reinvest</button>
             <button class="btn">Withdraw</button>
           </div>
         </div>
 
-        <div class="coins-illustration__item box box--black-background">
+        <div
+          class="coins-illustration__item inactive box box--black-background"
+        >
           <div class="coins-illustration__top flex">
             <div class="flex">
               <img src="assets/img/BNB-Logo.svg" alt="BNB" />
               <div class="coins-illustration__top-info">
                 <p>Binance Coin</p>
-                <span>50 GH/s</span>
+                <span id="bnb_power"
+                  >0<span style="font-size: inherit">&nbsp;GH/s</span></span
+                >
               </div>
             </div>
             <span class="coins-illustration__top-crypto-symbol">BNB</span>
           </div>
-          <span class="coins-illustration__range" id="bnbRange">10</span>
+          <span class="coins-illustration__range" id="bnb_balance">0</span>
           <div class="coins-illustration__graph flex">
             <img src="assets/img/BNB-Graph.svg" alt="BNB Graph" />
-            <p>+2.00% Daily</p>
+            <p>0.00% Daily</p>
           </div>
-          <input
-            type="range"
-            value="10"
-            step="5"
-            oninput="bnbRange.innerText = this.value"
-          />
+          <input type="range" value="0" step="5" min="0" max="240" />
           <div class="flex">
             <button class="btn btn--blue">Reinvest</button>
             <button class="btn">Withdraw</button>
           </div>
         </div>
 
-        <div class="coins-illustration__item box box--black-background">
+        <div
+          class="coins-illustration__item inactive box box--black-background"
+        >
           <div class="coins-illustration__top flex">
             <div class="flex">
               <img src="assets/img/XRP-Logo.svg" alt="XRP" />
               <div class="coins-illustration__top-info">
                 <p>Ripple</p>
-                <span>50 GH/s</span>
+                <span id="xrp_power"
+                  >0<span style="font-size: inherit">&nbsp;GH/s</span></span
+                >
               </div>
             </div>
             <span class="coins-illustration__top-crypto-symbol">XRP</span>
           </div>
-          <span class="coins-illustration__range" id="xrpRange">10</span>
+          <span class="coins-illustration__range" id="xrp_balance">0</span>
           <div class="coins-illustration__graph flex">
             <img src="assets/img/XRP-Graph.svg" alt="XRP Graph" />
-            <p>+2.00% Daily</p>
+            <p>0.00% Daily</p>
           </div>
-          <input
-            type="range"
-            value="10"
-            step="5"
-            oninput="xrpRange.innerText = this.value"
-          />
+          <input type="range" value="0" step="5" min="0" max="240" />
           <div class="flex">
             <button class="btn btn--blue">Reinvest</button>
             <button class="btn">Withdraw</button>
           </div>
         </div>
 
-        <div class="coins-illustration__item box box--black-background">
+        <div
+          class="coins-illustration__item inactive box box--black-background"
+        >
           <div class="coins-illustration__top flex">
             <div class="flex">
               <img src="assets/img/USDT-Logo.svg" alt="USDT" />
               <div class="coins-illustration__top-info">
                 <p>Tether &#40;TRC-20&#41;</p>
-                <span>50 GH/s</span>
+                <span id="usdt_power"
+                  >0<span style="font-size: inherit">&nbsp;GH/s</span></span
+                >
               </div>
             </div>
             <span class="coins-illustration__top-crypto-symbol">USDT</span>
           </div>
-          <span class="coins-illustration__range" id="usdtRange">10</span>
+          <span class="coins-illustration__range" id="usdt_balance">0</span>
           <div class="coins-illustration__graph flex">
             <img src="assets/img/USDT-Graph.svg" alt="USDT Graph" />
-            <p>+2.00% Daily</p>
+            <p>0.00% Daily</p>
           </div>
-          <input
-            type="range"
-            value="10"
-            step="5"
-            oninput="usdtRange.innerText = this.value"
-          />
+          <input type="range" value="0" step="5" min="0" max="240" />
           <div class="flex">
             <button class="btn btn--blue">Reinvest</button>
             <button class="btn">Withdraw</button>
           </div>
         </div>
 
-        <div class="coins-illustration__item box box--black-background">
+        <div
+          class="coins-illustration__item inactive box box--black-background"
+        >
           <div class="coins-illustration__top flex">
             <div class="flex">
               <img src="assets/img/TRX-Logo.svg" alt="TRX" />
               <div class="coins-illustration__top-info">
                 <p>Tron</p>
-                <span>50 GH/s</span>
+                <span id="trx_power"
+                  >0<span style="font-size: inherit">&nbsp;GH/s</span></span
+                >
               </div>
             </div>
             <span class="coins-illustration__top-crypto-symbol">TRX</span>
           </div>
-          <span class="coins-illustration__range" id="trxRange">10</span>
+          <span class="coins-illustration__range" id="trx_balance">0</span>
           <div class="coins-illustration__graph flex">
             <img src="assets/img/TRX-Graph.svg" alt="TRX Graph" />
-            <p>+2.00% Daily</p>
+            <p>0.00% Daily</p>
           </div>
-          <input
-            type="range"
-            value="10"
-            step="5"
-            oninput="trxRange.innerText = this.value"
-          />
+          <input type="range" value="0" step="5" min="0" max="240" />
           <div class="flex">
             <button class="btn btn--blue">Reinvest</button>
             <button class="btn">Withdraw</button>
