@@ -2,9 +2,6 @@
 const selectedCoin = document.querySelector(
   ".calculator__info-power-selected-coin"
 );
-const selectedCoinProfit = document.querySelector(
-  ".calculator__info-profit-selected-coin"
-);
 const coinsWrapper = document.querySelector(
   ".calculator__info-power-coins-wrapper"
 );
@@ -41,12 +38,7 @@ coinsList.forEach((coin, index) => {
     const imgRegex = /<img.*?>/;
     const pRegex = /<p>.*?<\/p>/;
 
-    changeOption(
-      [selectedCoin, selectedCoinProfit],
-      [imgRegex, pRegex],
-      coin,
-      coinsWrapper
-    );
+    changeOption([selectedCoin], [imgRegex, pRegex], coin, coinsWrapper);
 
     changeCoin(coin.id);
 

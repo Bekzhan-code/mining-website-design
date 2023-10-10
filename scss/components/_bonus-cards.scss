@@ -16,16 +16,6 @@
       font-size: 20px;
     }
 
-    input {
-      height: 48px;
-    }
-
-    button {
-      img {
-        margin-left: 8px;
-      }
-    }
-
     span {
       font-weight: 400;
       color: $light-gray;
@@ -43,6 +33,19 @@
     display: grid;
     grid-template-columns: 2.5fr 1fr;
     column-gap: 12px;
+
+    input {
+      height: 48px;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        margin-left: 8px;
+      }
+    }
   }
 
   &--light-text {
@@ -66,7 +69,8 @@
       row-gap: 12px;
       place-items: center;
 
-      input {
+      input,
+      button {
         width: 100%;
       }
     }

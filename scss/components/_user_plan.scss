@@ -8,7 +8,7 @@
 
   &__item {
     padding: 20px 24px;
-    min-width: 306px;
+    min-width: 100%;
 
     label {
       color: $gray;
@@ -26,7 +26,7 @@
   }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1280px) {
   .user-plan {
     grid-template-columns: 1fr 1fr;
   }

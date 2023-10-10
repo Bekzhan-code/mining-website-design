@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/main.css" />
 
     <script src="js/main.js" defer></script>
+    <script src="js/timer.js" defer></script>
     <title>Bonuses</title>
   </head>
   <body class="container">
@@ -59,13 +60,15 @@
             will be instantly credited to the power of your balance in your
             account.
           </p>
-          <button class="btn btn--blue">Get random bonus</button>
+          <button class="btn btn--blue" id="bonus_button" disabled>
+            Get random bonus
+          </button>
         </div>
         <div class="bonus-cards__item box box--black-background">
           <h4>You can get new bonus in:</h4>
           <p>Get every 6 hours random bonus</p>
           <div class="bonus-cards__time">
-            <h2>05:59:59</h2>
+            <h2 id="bonus_timer">05:59:59</h2>
             <span>Hours</span>
           </div>
         </div>

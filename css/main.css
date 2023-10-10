@@ -960,13 +960,6 @@ img {
 .calculator__info-profit-days-wrapper.active {
   display: block;
 }
-.calculator__info-profit-selected-coin {
-  text-transform: uppercase;
-  height: 40px;
-}
-.calculator__info-profit-selected-coin img {
-  margin-left: 12px;
-}
 .calculator__info-profit span {
   color: #42d559;
   font-weight: 600;
@@ -1340,7 +1333,7 @@ img {
 }
 .user-plan__item {
   padding: 20px 24px;
-  min-width: 306px;
+  min-width: 100%;
 }
 .user-plan__item label {
   color: #6f6f6f;
@@ -1354,7 +1347,7 @@ img {
   padding: 12px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1280px) {
   .user-plan {
     grid-template-columns: 1fr 1fr;
   }
@@ -1381,7 +1374,7 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 1.5em;
-  max-width: 416px;
+  min-width: 100%;
 }
 .coins-illustration__item.inactive p,
 .coins-illustration__item.inactive span {
@@ -1488,12 +1481,6 @@ img {
 .bonus-cards__item p {
   font-size: 20px;
 }
-.bonus-cards__item input {
-  height: 48px;
-}
-.bonus-cards__item button img {
-  margin-left: 8px;
-}
 .bonus-cards__item span {
   font-weight: 400;
   color: #bebebe;
@@ -1516,6 +1503,23 @@ img {
      -moz-column-gap: 12px;
           column-gap: 12px;
 }
+.bonus-cards__item-bottom input {
+  height: 48px;
+}
+.bonus-cards__item-bottom button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.bonus-cards__item-bottom button img {
+  margin-left: 8px;
+}
 .bonus-cards--light-text p {
   color: #bebebe;
 }
@@ -1537,7 +1541,8 @@ img {
     row-gap: 12px;
     place-items: center;
   }
-  .bonus-cards__item-bottom input {
+  .bonus-cards__item-bottom input,
+  .bonus-cards__item-bottom button {
     width: 100%;
   }
 }
