@@ -113,7 +113,7 @@ input_coins.addEventListener("input", () => {
   var rate = Number(document.getElementById(coin_selected).value);
   var usd = amount * rate;
 
-  if (usd >= 110) {
+  if (usd >= 210) {
     percent = 0.04;
     plan = 4;
   } else if (usd >= 70) {
@@ -147,7 +147,7 @@ input_usd.addEventListener("input", () => {
   var rate = Number(document.getElementById(coin_selected).value);
   var coins = amount / rate;
 
-  if (amount >= 110) {
+  if (amount >= 210) {
     percent = 0.04;
     plan = 4;
   } else if (amount >= 70) {
