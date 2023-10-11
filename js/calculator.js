@@ -113,19 +113,13 @@ input_coins.addEventListener("input", () => {
   var rate = Number(document.getElementById(coin_selected).value);
   var usd = amount * rate;
 
-  if (usd >= 7500) {
-    percent = 0.05;
-    plan = 5;
-  } else if (usd >= 2500) {
-    percent = 0.045;
-    plan = 4.5;
-  } else if (usd >= 250) {
+  if (usd >= 110) {
     percent = 0.04;
     plan = 4;
-  } else if (usd >= 25) {
+  } else if (usd >= 70) {
     percent = 0.03;
     plan = 3;
-  } else if (usd >= 1) {
+  } else if (usd >= 25) {
     percent = 0.025;
     plan = 2.5;
   } else {
@@ -153,19 +147,13 @@ input_usd.addEventListener("input", () => {
   var rate = Number(document.getElementById(coin_selected).value);
   var coins = amount / rate;
 
-  if (amount >= 7500) {
-    percent = 0.05;
-    plan = 5;
-  } else if (amount >= 2500) {
-    percent = 0.045;
-    plan = 4.5;
-  } else if (amount >= 250) {
+  if (amount >= 110) {
     percent = 0.04;
     plan = 4;
-  } else if (amount >= 25) {
+  } else if (amount >= 70) {
     percent = 0.03;
     plan = 3;
-  } else if (amount >= 1) {
+  } else if (amount >= 25) {
     percent = 0.025;
     plan = 2.5;
   } else {
